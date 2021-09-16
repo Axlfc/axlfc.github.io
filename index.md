@@ -11,21 +11,21 @@ title: Axel code portfolio
 
 #### Self introduction <a name="introduction"></a>
 Diligent and driven Cibersecurity student looking to leverage excellent writing and communication skills. 
-<br></br>
+
 Eager to further develop researching and interviewing skills at internship.
 
 #### Projects <a name="projects"></a>
 <ul>
-<li>[✔️ asix2Atesting](#asix2Atesting)</a></li>
-<li>[✔️ clockmoji](#Clockmoji)</a></li>
-<li>[✔️ get-winget](#GetWinget)</a></li>
-<li>[✔️ subnetter](#Subnetter)</a></li>
-<li>[✔️ converters](#Converters)</a></li>
-<li>[🚧   This same webpage](#GithubWebpage)</a></li>
-<li>[🚧   Customizer](#Customizer)</a></li>
-<li>[🚧    Java Data Structures](#JavaDataStructures)</a></li>
-<li>[🚧  Useful links](#UsefulLinks)</a></li>
-<li>[🚧    SI](#SI)</a></li>
+<li>✔️ [asix2Atesting](#asix2Atesting)</a></li>
+<li>✔️ [clockmoji](#Clockmoji)</a></li>
+<li>✔️ [get-winget](#GetWinget)</a></li>
+<li>✔️ [subnetter](#Subnetter)</a></li>
+<li>✔️ [converters](#Converters)</a></li>
+<li>🚧   [This same webpage](#GithubWebpage)</a></li>
+<li>🚧   [Customizer](#Customizer)</a></li>
+<li>🚧    [Java Data Structures](#JavaDataStructures)</a></li>
+<li>🚧  [Useful links](#UsefulLinks)</a></li>
+<li>🚧    [SI](#SI)</a></li>
 </ul>
 
 #### Projects details <a name="projectsdetails"></a>
@@ -39,7 +39,7 @@ Eager to further develop researching and interviewing skills at internship.
 7.  <a href="https://github.com/AleixMT/Linux-Auto-Customizer" target="_blank" name="Customizer">Customizer</a>
 8.  <a href="https://github.com/Axlfc/JavaDataStructures" target="_blank" name="JavaDataStructures">Java Data Structures</a>
 9.  <a href="https://github.com/Axlfc/useful-links" target="_blank" name="UsefulLinks">Useful links</a>
-10. <a href="https://github.com/Axlfc/SI" target="_blank" name="SI">SI</a></li>
+10. <a href="https://github.com/Axlfc/SI" target="_blank" name="SI">SI</a>
 
 
 #### Another paragraph <a name="paragraph2"></a>
