@@ -32,7 +32,7 @@ Eager to further develop researching and interviewing skills at internship.
 <li><a href="https://github.com/Axlfc/axlfc.github.io" target="_blank" name="GithubWebpage">axlfc.github.io</a></li>
   - Porfolio in form of webpage using bootstrap and github pages.
 <li><a href="https://github.com/AleixMT/Linux-Auto-Customizer" target="_blank" name="Customizer">Customizer</a></li>
-  - Package manager manager, package installation & uninstallation manager with high level of customization availabilities. Feature installations can be managed very easily. It houses over 200 customization and installation features (programs, functions, aliases and customizations of the Linux system & more) everything being programmed in 100% shell (<code>bash</code>).
+  - It houses over 200 customization and installation features everything being programmed in 100% shell (<code>bash</code>).
 <li><a href="https://github.com/Axlfc/JavaDataStructures" target="_blank" name="JavaDataStructures">Java Data Structures</a></li>
   - This repo is mainly created to be a guide for myself to learn about data structures in Java as a having few java programming experience.
 <li><a href="https://github.com/Axlfc/useful-links" target="_blank" name="UsefulLinks">Useful links</a></li>
