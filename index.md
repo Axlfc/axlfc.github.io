@@ -23,7 +23,7 @@ Diligent and driven Cibersecurity student looking to leverage excellent writing 
 <li>[🚧 Customizer](https://github.com/AleixMT/Linux-Auto-Customizer)</li>
 <li>[🚧 Java Data Structures](https://github.com/Axlfc/JavaDataStructures)</li>
 <li>[🚧 Useful links](https://github.com/Axlfc/useful-links)</li>
-<li>[🚧 SI](https://github.com/Axlfc/SI)
+<li>[🚧 SI](https://github.com/Axlfc/SI)</li>
 </ul>
 
 #### Projects details <a name="projectsdetails"></a>
