@@ -15,18 +15,17 @@ Diligent and driven Cibersecurity student looking to leverage excellent writing 
 Eager to further develop researching and interviewing skills at internship.
 
 #### Projects <a name="projects"></a>
-<ul>
-<li>✔️ [asix2Atesting](#asix2Atesting)</li>
-<li>✔️ [clockmoji](#Clockmoji)</li>
-<li>✔️ [get-winget](#GetWinget)</li>
-<li>✔️ [subnetter](#Subnetter)</li>
-<li>✔️ [converters](#Converters)</li>
-<li>🚧   [This same webpage](#GithubWebpage)</li>
-<li>🚧   [Customizer](#Customizer)</li>
-<li>🚧    [Java Data Structures](#JavaDataStructures)</li>
-<li>🚧  [Useful links](#UsefulLinks)</li>
-<li>🚧    [SI](#SI)</li>
-</ul>
+1. ✔️ [asix2Atesting](#asix2Atesting)
+2. ✔️ [clockmoji](#Clockmoji)
+3. ✔️ [get-winget](#GetWinget)
+4. ✔️ [subnetter](#Subnetter)
+5. ✔️ [converters](#Converters)
+6. 🚧   [This same webpage](#GithubWebpage)
+7. 🚧   [Customizer](#Customizer)
+8. 🚧    [Java Data Structures](#JavaDataStructures)
+9. 🚧  [Useful links](#UsefulLinks)
+10. 🚧    [SI](#SI)
+
 #### Projects details <a name="projectsdetails"></a>
 <ol>
 <li><a href="https://gitlab.com/Axlfc/asix2Atesting" target="_blank" name="asix2Atesting">asix2Atesting</a></li>
