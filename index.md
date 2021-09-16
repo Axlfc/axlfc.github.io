@@ -15,20 +15,21 @@ Diligent and driven Cibersecurity student looking to leverage excellent writing 
 Eager to further develop researching and interviewing skills at internship.
 
 #### Projects <a name="projects"></a>
-1.  ✔️ [asix2Atesting](#asix2Atesting)
-2.  🐧  [clockmoji](#Clockmoji)
-3.  🪟  [get-winget](#GetWinget)
-4.  🐍  [subnetter](#Subnetter)
-5.  🐍  [converters](#Converters)
-6.  🚧  [This same webpage](#GithubWebpage)
-7.  🚧  [Customizer](#Customizer)
-8.  🚧  [Java Data Structures](#JavaDataStructures)
-9.  🚧  [Useful links](#UsefulLinks)
-10. 🚧  [SI](#SI)
+
+-   🚧  [This same webpage](#GithubWebpage)
+-   🚧  [Customizer](#Customizer)
+-   🚧  [Java Data Structures](#JavaDataStructures)
+-   🚧  [Useful links](#UsefulLinks)
+-   🚧  [SI](#SI)
+-   ✔️  [asix2Atesting](#asix2Atesting)
+-   🐧  [clockmoji](#Clockmoji)
+-   🪟  [get-winget](#GetWinget)
+-   🐍  [subnetter](#Subnetter)
+-   🐍  [converters](#Converters)
 
 #### Projects details <a name="projectsdetails"></a>
 <ul>
-<li><a href="https://github.com/Axlfc/axlfc.github.io" target="_blank" name="GithubWebpage">This same webpage</a></li>
+<li><a href="https://github.com/Axlfc/axlfc.github.io" target="_blank" name="GithubWebpage">axlfc.github.io</a></li>
   - Porfolio in form of webpage using bootstrap and github pages.
 <li><a href="https://github.com/AleixMT/Linux-Auto-Customizer" target="_blank" name="Customizer">Customizer</a></li>
   - Package manager manager, package installation & uninstallation manager with high level of customization availabilities. Feature installations can be managed very easily. It houses over 200 customization and installation features (programs, functions, aliases and customizations of the Linux system & more) everything being programmed in 100% shell (<code>bash</code>).
