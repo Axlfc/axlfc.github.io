@@ -16,7 +16,7 @@ Diligent and driven Cibersecurity student looking to leverage excellent writing 
 <ul>
 <li><a href="https://gitlab.com/Axlfc/asix2Atesting" target="_blank">✔️ asix2Atesting</a></li>
 <li><a href="https://gitlab.com/Axlfc/clockmoji" target="_blank">✔️ clockmoji</a></li>
-<li><a href="https://gitlab.com/Axlfc/asix2Atesting" target="_blank">✔️ get-winget</a></li>
+<li><a href="https://gitlab.com/Axlfc/get-winget" target="_blank">✔️ get-winget</a></li>
 <li><a href="https://github.com/Axlfc/subnetter" target="_blank">✔️ subnetter</a></li>
 <li><a href="https://github.com/Axlfc/converters" target="_blank">✔️ converters</a></li>
 <li><a href="https://github.com/Axlfc/axlfc.github.io" target="_blank">🚧   This same webpage</a></li>
