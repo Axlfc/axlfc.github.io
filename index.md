@@ -33,38 +33,53 @@ Eager to further develop researching and interviewing skills at internship.
   - Porfolio in form of webpage using bootstrap and github pages.
   
   Clone:
+
   <code> git clone https://github.com/Axlfc/axlfc.github.io /home/username/Desktop/git/gitlab/axlfc.github.io </code>  
+
 <li><a href="https://github.com/AleixMT/Linux-Auto-Customizer" target="_blank" name="Customizer">Customizer</a></li>
   - It houses over 200 customization and installation features everything being programmed in 100% shell (<code>bash</code>).
 
   Clone:
+
   <code> git clone https://gitlab.com/AleixMT/Linux-Auto-Customizer /home/username/Desktop/git/Customizer </code>
+
 <li><a href="https://github.com/Axlfc/JavaDataStructures" target="_blank" name="JavaDataStructures">Java Data Structures</a></li>
   - This repo is mainly created to be a guide for myself to learn about data structures in Java as a having few java programming experience.
+
   Clone:
+
   <code> git clone https://github.com/Axlfc/JavaDataStructures /home/username/Desktop/git/JavaDataStructures </code>
+
 <li><a href="https://github.com/Axlfc/useful-links" target="_blank" name="UsefulLinks">Useful links</a></li>
   - Collection of internet url's and book names containing some few articles about computer science and programming strategies.
 
   Clone:
+
   <code> git clone https://gitlab.com/Axlfc/useful-links /home/username/Desktop/git/useful-links </code>
+
 <li><a href="https://github.com/Axlfc/SI" target="_blank" name="SI">SI</a></li>
   - Trying to emulate some magnitude conversions of the International System.
 
   Clone:
+
   <code> git clone https://gitlab.com/Axlfc/SI /home/username/Desktop/git/SI </code>
+
 <li><a href="https://gitlab.com/Axlfc/asix2Atesting" target="_blank" name="asix2Atesting">asix2Atesting</a></li>
   - ASIX (Administració de sistemas en informàtics i xarxa) Testing. Customized visuals and change some command control configurations (~/.tmux.conf) of how tmux can be used with the mouse (and touch pannels) windows and panes auto naming as for loading/saving preferred sets of sessions via tmuxp...
   
   Clone:
+
   <code> git clone https://gitlab.com/Axlfc/asix2Atesting /home/username/Desktop/git/gitlab/asix2Atesting </code>
+
   <code> cd /home/username/Desktop/git/gitlab/asix2Atesting </code>
+
 <li><a href="https://gitlab.com/Axlfc/clockmoji" target="_blank" name="Clockmoji">clockmoji</a></li>
   - Emoji clock, it gives you the current time in emoji form. Good idea to add it to asix2Atesting.
 
   Clone:
+
   <code> git clone https://gitlab.com/Axlfc/clockmoji ~/Desktop/git/gitlab/clockmoji </code>
-  give execution rights to script
+
   <code> chmod +x /home/username/Desktop/git/gitlab/clockmoji/clockmoji.sh </code>
 <li><a href="https://github.com/Axlfc/get-winget" target="_blank" name="GetWinget">get-winget</a></li>
   - winget (Window's package manager) installation via commands in PowerShell or cmd.
@@ -72,18 +87,23 @@ Eager to further develop researching and interviewing skills at internship.
   Clone:
   - clone repository in windows machine
   - via powershell or cmd, navigate to the cloned folder and run the script.
+
 <li><a href="https://github.com/Axlfc/subnetter" target="_blank" name="Subnetter">subnetter</a></li>
   - Perform simple network subnetting.
 
   Clone:
+
   <code> git clone https://github.com/Axlfc/subnetter /home/username/Desktop/git/subnetter </code>
 
 <li><a href="https://github.com/Axlfc/converters" target="_blank" name="Converters">converters</a></li>
   - Converters are used to translate any numberic representation to decimal. (Such as binary, octal, hexadecimal, UTF...) using `to` you can accomplish and it's better to install this via `Customizer`, so you can write bintodec, dectobin, hextoutf... 
   
   Clone:
+
   <code> git clone https://github.com/AleixMT/Linux-Auto-Customizer /home/username/Desktop/git/Customizer </code>
+
   <code> cd /home/username/Desktop/git/Linux-Auto-Customizer </code>
+  
   <code> bash install.sh -v -o converters </code>
 </ul>
 
