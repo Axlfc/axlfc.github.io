@@ -80,12 +80,17 @@ Eager to further develop researching and interviewing skills at internship.
 
 <li><a href="https://github.com/Axlfc/converters" target="_blank" name="Converters">converters</a></li>
   - Converters are used to translate any numberic representation to decimal. (Such as binary, octal, hexadecimal, UTF...) using `to` you can accomplish and it's better to install this via `Customizer`, so you can write bintodec, dectobin, hextoutf... 
-  
+  <br></br>
+
   <code> git clone https://github.com/AleixMT/Linux-Auto-Customizer /home/username/Desktop/git/Customizer </code>
+  <br></br>
 
   <code> cd /home/username/Desktop/git/Linux-Auto-Customizer </code>
+  <br></br>
 
   <code> bash install.sh -v -o converters </code>
+  <br></br>
+
 </ul>
 
 #### Author's accomplishments <a name="education"></a>
