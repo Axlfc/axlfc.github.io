@@ -14,16 +14,16 @@ Diligent and driven Cibersecurity student looking to leverage excellent writing 
 
 #### Projects <a name="projects"></a>
 <ul>
-<li>✔️[asix2Atesting](https://gitlab.com/Axlfc/asix2Atesting)</li>
-<li>✔️[clockmoji](https://gitlab.com/Axlfc/clockmoji)</li>
-<li>✔️[get-winget](https://github.com/Axlfc/get-winget)</li>
-<li>✔️[subnetter](https://github.com/Axlfc/converters)</li>
-<li>✔️[converters](https://github.com/Axlfc/converters)</li>
-<li>✔️[This same webpage](https://github.com/Axlfc/axlfc.github.io)</li>
-<li>🚧[Customizer](https://github.com/AleixMT/Linux-Auto-Customizer)</li>
-<li>🚧[Java Data Structures](https://github.com/Axlfc/JavaDataStructures)</li>
-<li>🚧[Useful links](https://github.com/Axlfc/useful-links)</li>
-<li>🚧[SI](https://github.com/Axlfc/SI)</li>
+<li><a href="https://gitlab.com/Axlfc/asix2Atesting">✔️ asix2Atesting</a></li>
+<li><a href="https://gitlab.com/Axlfc/clockmoji">✔️ clockmoji</a></li>
+<li><a href="https://gitlab.com/Axlfc/asix2Atesting">✔️ get-winget</a></li>
+<li><a href="https://github.com/Axlfc/subnetter">✔️ subnetter</a></li>
+<li><a href="https://github.com/Axlfc/converters">✔️ converters</a></li>
+<li><a href="https://github.com/Axlfc/axlfc.github.io">🚧   This same webpage</a></li>
+<li><a href="https://github.com/AleixMT/Linux-Auto-Customizer">🚧   Customizer</a></li>
+<li><a href="https://github.com/Axlfc/JavaDataStructures">🚧    Java Data Structures</a></li>
+<li><a href="https://github.com/Axlfc/useful-links">🚧  Useful links</a></li>
+<li><a href="https://github.com/Axlfc/SI">🚧    SI</a></li>
 </ul>
 
 #### Projects details <a name="projectsdetails"></a>
