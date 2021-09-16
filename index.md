@@ -3,10 +3,6 @@ layout: page
 title: Axel code portfolio
 ---
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/nicolas-van/bootstrap-4-github-pages?style=social)](https://github.com/nicolas-van/bootstrap-4-github-pages)
-
-A [Bootstrap 4](https://getbootstrap.com/) template project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
-
 # Table of contents
 1. [Introduction](#introduction)
 2. [Some paragraph](#paragraph1)
