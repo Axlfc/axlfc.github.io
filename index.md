@@ -11,7 +11,7 @@ title: Axel code portfolio
 
 #### Self introduction <a name="introduction"></a>
 Diligent and driven Cibersecurity student looking to leverage excellent writing and communication skills. 
-
+<br></br>
 Eager to further develop researching and interviewing skills at internship.
 
 #### Projects <a name="projects"></a>
