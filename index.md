@@ -16,16 +16,16 @@ Eager to further develop researching and interviewing skills at internship.
 
 #### Projects <a name="projects"></a>
 <ul>
-<li>✔️ [asix2Atesting](#asix2Atesting)</a></li>
-<li>✔️ [clockmoji](#Clockmoji)</a></li>
-<li>✔️ [get-winget](#GetWinget)</a></li>
-<li>✔️ [subnetter](#Subnetter)</a></li>
-<li>✔️ [converters](#Converters)</a></li>
-<li>🚧   [This same webpage](#GithubWebpage)</a></li>
-<li>🚧   [Customizer](#Customizer)</a></li>
-<li>🚧    [Java Data Structures](#JavaDataStructures)</a></li>
-<li>🚧  [Useful links](#UsefulLinks)</a></li>
-<li>🚧    [SI](#SI)</a></li>
+<li>✔️ [asix2Atesting](#asix2Atesting)</li>
+<li>✔️ [clockmoji](#Clockmoji)</li>
+<li>✔️ [get-winget](#GetWinget)</li>
+<li>✔️ [subnetter](#Subnetter)</li>
+<li>✔️ [converters](#Converters)</li>
+<li>🚧   [This same webpage](#GithubWebpage)</li>
+<li>🚧   [Customizer](#Customizer)</li>
+<li>🚧    [Java Data Structures](#JavaDataStructures)</li>
+<li>🚧  [Useful links](#UsefulLinks)</li>
+<li>🚧    [SI](#SI)</li>
 </ul>
 
 #### Projects details <a name="projectsdetails"></a>
