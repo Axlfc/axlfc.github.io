@@ -40,12 +40,12 @@ Eager to further develop researching and interviewing skills at internship.
   <code> git clone https://gitlab.com/AleixMT/Linux-Auto-Customizer /home/username/Desktop/git/Customizer </code>
 <br/><br/> 
 <li><a href="https://github.com/Axlfc/JavaDataStructures" target="_blank" name="JavaDataStructures">Java Data Structures</a></li>
-  - This repo is mainly created to be a guide for myself to learn about data structures in Java as a having few java programming experience.
+  - This repo is mainly created to be a guide for myself to learn about data structures in Java as I have few java programming experience.
   <br/>
   <code> git clone https://github.com/Axlfc/JavaDataStructures /home/username/Desktop/git/JavaDataStructures </code>
 <br/><br/> 
 <li><a href="https://github.com/Axlfc/useful-links" target="_blank" name="UsefulLinks">Useful links</a></li>
-  - Collection of internet url's and book names containing some few articles about computer science and programming strategies.
+  - Collection of internet urls and book names, it contains some few articles about computer science and programming strategies.
   <br/>
   <code> git clone https://gitlab.com/Axlfc/useful-links /home/username/Desktop/git/useful-links </code>
 <br/><br/> 
