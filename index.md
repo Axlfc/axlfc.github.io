@@ -55,7 +55,7 @@ Eager to further develop researching and interviewing skills at internship.
   <code> git clone https://gitlab.com/Axlfc/SI /home/username/Desktop/git/SI </code>
 <br/><br/> 
 <li><a href="https://gitlab.com/Axlfc/asix2Atesting" target="_blank" name="asix2Atesting">asix2Atesting</a></li>
-  - ASIX (Administració de sistemas en informàtics i xarxa) Testing. Customized visuals and change some command control configurations (~/.tmux.conf) of how tmux can be used with the mouse (and touch pannels) windows and panes auto naming as for loading/saving preferred sets of sessions via tmuxp...
+  - ASIX (Administració de sistemes informàtics i xarxa) Testing. Customized visuals and change some command control configurations (~/.tmux.conf) of how tmux can be used with the mouse (and touch pannels) windows and panes auto naming as for loading/saving preferred sets of sessions via tmuxp...
   <br/>
   <code> git clone https://gitlab.com/Axlfc/asix2Atesting /home/username/Desktop/git/gitlab/asix2Atesting </code>
   <br/>
