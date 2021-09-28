@@ -26,7 +26,7 @@ Eager to further develop researching and interviewing skills at internship.
 -   🪟  [get-winget](#GetWinget)
 -   🐍  [subnetter](#Subnetter)
 -   🐍  [converters](#Converters)
--   🐧🐍  [ScriptsStudio](#ScriptsStudio)
+-   🐧🚧🐍  [ScriptsStudio](#ScriptsStudio)
 
 
 #### Projects details <a name="projectsdetails"></a>
