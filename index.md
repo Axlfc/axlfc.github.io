@@ -26,6 +26,8 @@ Eager to further develop researching and interviewing skills at internship.
 -   🪟  [get-winget](#GetWinget)
 -   🐍  [subnetter](#Subnetter)
 -   🐍  [converters](#Converters)
+-   🐧🐍  [ScriptsStudio](#ScriptsStudio)
+
 
 #### Projects details <a name="projectsdetails"></a>
 <ul>
@@ -90,6 +92,11 @@ Eager to further develop researching and interviewing skills at internship.
 
   <code> bash install.sh -v -o converters </code>
   <br/>
+<br/><br/> 
+<li><a href="https://github.com/ScriptsStudio/ScriptsStudio" target="_blank" name="ScriptsStudio">ScriptsStudio</a></li>
+  - Scripts to automate tasks in Linux, Windows & Mac with a nice UI interface...
+  <br/>
+   <code> git clone https://github.com/Axlfc/subnetter /home/username/Desktop/git/subnetter </code>
 <br/><br/> 
 </ul>
 
