@@ -113,6 +113,4 @@ Eager to further develop researching and interviewing skills at internship.
   - STIC internship (Tarragona)
 
 
-<script type="text/javascript" src="custom_script.js">
-buttons.innerHTML = '<img src="images/top.png" />';
-</script>
+<script type="text/javascript" src="custom_script.js"></script>
