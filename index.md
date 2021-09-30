@@ -100,10 +100,6 @@ Eager to further develop researching and interviewing skills at internship.
 <br/><br/> 
 </ul>
 
-<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
 #### Author's accomplishments <a name="education"></a>
 
 - Science and Technology High School; INS Jaume I (Salou)
