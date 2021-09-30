@@ -111,5 +111,3 @@ Eager to further develop researching and interviewing skills at internship.
   - Internship in interior design (Lleida)
 - ASIX Computer Systems Network Administration; Institut Vidal i Barraquer (Tarragona) *currenly coursing
   - STIC internship (Tarragona)
-
-<script type="text/javascript" src="custom_script.js"></script>
