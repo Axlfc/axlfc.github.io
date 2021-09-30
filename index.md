@@ -27,6 +27,10 @@ Eager to further develop researching and interviewing skills at internship.
 -   🐍  [subnetter](#Subnetter)
 -   🐍  [converters](#Converters)
 
+<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
 #### Projects details <a name="projectsdetails"></a>
 <ul>
 <li><a href="https://github.com/Axlfc/axlfc.github.io" target="_blank" name="GithubWebpage">axlfc.github.io</a></li>
@@ -100,3 +104,6 @@ Eager to further develop researching and interviewing skills at internship.
   - Internship in interior design (Lleida)
 - ASIX Computer Systems Network Administration; Institut Vidal i Barraquer (Tarragona) *currenly coursing
   - STIC internship (Tarragona)
+
+
+<script type="text/javascript" src="custom_script.js"></script>

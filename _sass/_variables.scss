@@ -81,6 +81,13 @@ $input-btn-padding-y-lg:      2rem !default;
 $input-btn-padding-x-lg:      2rem !default;
 $btn-font-weight:             600 !default;
 
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+
 // Forms
 
 $input-line-height:                     1.5 !default;
