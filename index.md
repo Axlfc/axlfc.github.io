@@ -114,5 +114,5 @@ Eager to further develop researching and interviewing skills at internship.
 
 
 <script type="text/javascript" src="custom_script.js">
-buttons.innerHTML = '<img src="images\top.png" />';
+buttons.innerHTML = '<img src="images/top.png" />';
 </script>
