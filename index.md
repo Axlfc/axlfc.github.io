@@ -112,5 +112,4 @@ Eager to further develop researching and interviewing skills at internship.
 - ASIX Computer Systems Network Administration; Institut Vidal i Barraquer (Tarragona) *currenly coursing
   - STIC internship (Tarragona)
 
-<link href="custom_style.css" rel="stylesheet"></link>
 <script type="text/javascript" src="custom_script.js"></script>
