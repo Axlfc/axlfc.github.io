@@ -29,10 +29,6 @@ Eager to further develop researching and interviewing skills at internship.
 -   🐧🚧🐍  [ScriptsStudio](#ScriptsStudio)
 
 
-<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
 #### Projects details <a name="projectsdetails"></a>
 <ul>
 <li><a href="https://github.com/Axlfc/axlfc.github.io" target="_blank" name="GithubWebpage">axlfc.github.io</a></li>
@@ -103,6 +99,10 @@ Eager to further develop researching and interviewing skills at internship.
    <code> git clone https://github.com/Axlfc/subnetter /home/username/Desktop/git/subnetter </code>
 <br/><br/> 
 </ul>
+
+<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
 #### Author's accomplishments <a name="education"></a>
 
