@@ -19,14 +19,18 @@ Eager to further develop researching and interviewing skills at internship.
 -   🚧  [This same webpage](#GithubWebpage)
 -   🚧  [Customizer](#Customizer)
 -   🚧  [Java Data Structures](#JavaDataStructures)
--   🚧  [Useful links](#UsefulLinks)
+-   ✔️  [Useful links](#UsefulLinks)
 -   🚧  [SI](#SI)
 -   ✔️  [asix2Atesting](#asix2Atesting)
 -   🐧  [clockmoji](#Clockmoji)
 -   🪟  [get-winget](#GetWinget)
+-   🪟  [custom-wsl2-desktop](#CustomWSL2Desktop)
 -   🐍  [subnetter](#Subnetter)
 -   🐍  [converters](#Converters)
--   🐧🚧🐍  [ScriptsStudio](#ScriptsStudio)
+-   🐍  [Program Icons](#ProgramIcons)
+-   🐧  [icons](#Icons)
+-   🐧🤖🪟🚧🐍  [ScriptsStudio](#ScriptsStudio)
+-   
 
 
 #### Projects details <a name="projectsdetails"></a>
@@ -47,7 +51,7 @@ Eager to further develop researching and interviewing skills at internship.
   <code> git clone https://github.com/Axlfc/JavaDataStructures /home/username/Desktop/git/JavaDataStructures </code>
 <br/><br/> 
 <li><a href="https://github.com/Axlfc/useful-links" target="_blank" name="UsefulLinks">Useful links</a></li>
-  - Collection of internet urls and book names, it contains some few articles about computer science and programming strategies.
+  - Collection of internet urls and book names, it contains some few articles about computer science and programming strategies and author's own code references.
   <br/>
   <code> git clone https://gitlab.com/Axlfc/useful-links /home/username/Desktop/git/useful-links </code>
 <br/><br/> 
@@ -76,6 +80,12 @@ Eager to further develop researching and interviewing skills at internship.
   - clone repository in windows machine
   - via powershell or cmd, navigate to the cloned folder and run the script.
 <br/><br/> 
+<li><a href="https://github.com/Axlfc/custom-wsl2-desktop" target="_blank" name="CustomWSL2Desktop">custom-wsl2-desktop</a></li>
+  - Usage of desktop icons of installed WSL2 apps & features of Debian, Ubuntu... (as an example, it only shows one, linux package 'nemo') 
+  - clone repository files in windows machine's desktop folder.
+  - via powershell or cmd, navigate to the cloned folder and run the script <code>short.bat</code>.
+<br/><br/> 
+
 <li><a href="https://github.com/Axlfc/subnetter" target="_blank" name="Subnetter">subnetter</a></li>
   - Perform simple network subnetting.
   <br/>
@@ -93,10 +103,20 @@ Eager to further develop researching and interviewing skills at internship.
   <code> bash install.sh -v -o converters </code>
   <br/>
 <br/>
+<li><a href="https://github.com/Axlfc/program-icons" target="_blank" name="ProgramIcons">program-icons</a></li>
+  - Perform massive icon downlad from the internet based on a formatted input <code>.md</code> file that stores programs we want to install
+  <br/>
+   <code> git clone https://github.com/Axlfc/program-icons /home/username/Desktop/git/program-icons </code>
+<br/><br/> 
+<li><a href="https://github.com/Axlfc/icons" target="_blank" name="Icons">icons</a></li>
+  - Storage folder system for .ico files from programs we want to install
+  <br/>
+   <code> git clone https://github.com/Axlfc/icons /home/username/Desktop/git/subnetter </code>
+<br/><br/> 
 <li><a href="https://github.com/ScriptsStudio/ScriptsStudio" target="_blank" name="ScriptsStudio">ScriptsStudio</a></li>
   - Scripts to automate tasks in Linux, Android, Windows & Mac with a nice UI interface for system administrators and normal users...
   <br/>
-   <code> git clone https://github.com/Axlfc/subnetter /home/username/Desktop/git/subnetter </code>
+   <code> git clone https://github.com/ScriptsStudio/ScriptsStudio /home/username/Desktop/git/ScriptsStudio </code>
 <br/><br/> 
 </ul>
 
