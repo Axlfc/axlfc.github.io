@@ -119,7 +119,7 @@ Eager to further develop researching and interviewing skills at internship.
    <code> git clone https://github.com/ScriptsStudio/ScriptsStudio /home/username/Desktop/git/ScriptsStudio </code>
 <br/><br/> 
 <li><a href="https://github.com/Axlfc/create-custom-wsl2-desktop-shortcuts" target="_blank" name="CreateCustomWSL2DesktopShortcuts">create-custom-wsl2-desktop-shortcuts</a></li>
-  - Storage folder system for .ico files from programs we want to install
+  - Replicats .desktop files from customizer installations in Linux system, but in WSL2 Subsystem manual desktop shortcut semi-automation
   <br/>
    <code> git clone https://github.com/Axlfc/create-custom-wsl2-desktop-shortcuts /home/username/Desktop/git/create-custom-wsl2-desktop-shortcuts </code>
 <br/><br/> 
