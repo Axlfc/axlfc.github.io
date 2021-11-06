@@ -27,10 +27,10 @@ Eager to further develop researching and interviewing skills at internship.
 -   🪟  [custom-wsl2-desktop](#CustomWSL2Desktop)
 -   🐍  [subnetter](#Subnetter)
 -   🐍  [converters](#Converters)
--   🐍  [Program Icons](#ProgramIcons)
--   🐧  [icons](#Icons)
--   🐧🤖🪟🚧🐍  [ScriptsStudio](#ScriptsStudio)
--   
+-   🐍  [program-icons](#ProgramIcons)
+-   🐧  [Icons](#Icons)
+-   🐧🤖🪟🚧🎯🐍  [ScriptsStudio](#ScriptsStudio)
+-   🚧🐧  [create-custom-wsl2-desktop-shortcuts](#CreateCustomWSL2DesktopShortcuts)
 
 
 #### Projects details <a name="projectsdetails"></a>
@@ -117,6 +117,11 @@ Eager to further develop researching and interviewing skills at internship.
   - Scripts to automate tasks in Linux, Android, Windows & Mac with a nice UI interface for system administrators and normal users...
   <br/>
    <code> git clone https://github.com/ScriptsStudio/ScriptsStudio /home/username/Desktop/git/ScriptsStudio </code>
+<br/><br/> 
+<li><a href="https://github.com/Axlfc/create-custom-wsl2-desktop-shortcuts" target="_blank" name="CreateCustomWSL2DesktopShortcuts">create-custom-wsl2-desktop-shortcuts</a></li>
+  - Storage folder system for .ico files from programs we want to install
+  <br/>
+   <code> git clone https://github.com/Axlfc/create-custom-wsl2-desktop-shortcuts /home/username/Desktop/git/create-custom-wsl2-desktop-shortcuts </code>
 <br/><br/> 
 </ul>
 
