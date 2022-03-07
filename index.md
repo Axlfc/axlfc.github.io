@@ -18,11 +18,9 @@ Eager to further develop researching and interviewing skills at internship.
 
 -   🚧  [This same webpage](#GithubWebpage)
 -   🚧  [Customizer](#Customizer)
--   🚧  [Java Data Structures](#JavaDataStructures)
 -   ✔️  [Useful links](#UsefulLinks)
 -   🚧  [SI](#SI)
 -   ✔️  [asix2Atesting](#asix2Atesting)
--   🐧  [clockmoji](#Clockmoji)
 -   🪟  [get-winget](#GetWinget)
 -   🪟  [custom-wsl2-desktop](#CustomWSL2Desktop)
 -   🐍  [subnetter](#Subnetter)
@@ -44,12 +42,7 @@ Eager to further develop researching and interviewing skills at internship.
   - It houses over 200 customization and installation features everything being programmed in 100% shell (<code>bash</code>).
   <br/>
   <code> git clone https://gitlab.com/AleixMT/Linux-Auto-Customizer /home/username/Desktop/git/Customizer </code>
-<br/><br/> 
-<li><a href="https://github.com/Axlfc/JavaDataStructures" target="_blank" name="JavaDataStructures">Java Data Structures</a></li>
-  - This repo is mainly created to be a guide for myself to learn about data structures in Java as I have few java programming experience.
-  <br/>
-  <code> git clone https://github.com/Axlfc/JavaDataStructures /home/username/Desktop/git/JavaDataStructures </code>
-<br/><br/> 
+<br/><br/>
 <li><a href="https://github.com/Axlfc/useful-links" target="_blank" name="UsefulLinks">Useful links</a></li>
   - Collection of internet urls and book names, it contains some few articles about computer science and programming strategies and author's own code references.
   <br/>
@@ -66,14 +59,7 @@ Eager to further develop researching and interviewing skills at internship.
   <code> git clone https://gitlab.com/Axlfc/asix2Atesting /home/username/Desktop/git/gitlab/asix2Atesting </code>
   <br/>
   <code> cd /home/username/Desktop/git/gitlab/asix2Atesting </code>
-<br/><br/> 
-<li><a href="https://gitlab.com/Axlfc/clockmoji" target="_blank" name="Clockmoji">clockmoji</a></li>
-  - Emoji clock, it gives you the current time in emoji form. Good idea to add it to asix2Atesting.
-  <br/>
-   <code> git clone https://gitlab.com/Axlfc/clockmoji ~/Desktop/git/gitlab/clockmoji </code>
-  <br/>
-  <code> chmod +x /home/username/Desktop/git/gitlab/clockmoji/clockmoji.sh </code>
-<br/><br/>   
+<br/><br/>
 <li><a href="https://github.com/Axlfc/get-winget" target="_blank" name="GetWinget">get-winget</a></li>
   - winget (Window's package manager) installation via commands in PowerShell or cmd.
 
@@ -119,7 +105,7 @@ Eager to further develop researching and interviewing skills at internship.
    <code> git clone https://github.com/ScriptsStudio/ScriptsStudio /home/username/Desktop/git/ScriptsStudio </code>
 <br/><br/> 
 <li><a href="https://github.com/Axlfc/create-custom-wsl2-desktop-shortcuts" target="_blank" name="CreateCustomWSL2DesktopShortcuts">create-custom-wsl2-desktop-shortcuts</a></li>
-  - Replicats .desktop files from customizer installations in Linux system, but in WSL2 Subsystem manual desktop shortcut semi-automation
+  - Replicates .desktop files from customizer installations in Linux system, but in WSL2 Subsystem manual desktop shortcut semi-automation in Windows desktop.
   <br/>
    <code> git clone https://github.com/Axlfc/create-custom-wsl2-desktop-shortcuts /home/username/Desktop/git/create-custom-wsl2-desktop-shortcuts </code>
 <br/><br/> 
@@ -131,4 +117,4 @@ Eager to further develop researching and interviewing skills at internship.
 - 3D animation, games and interactive environments; ILERNA (Lleida)
   - Internship in interior design (Lleida)
 - ASIX Computer Systems Network Administration; Institut Vidal i Barraquer (Tarragona) *currenly coursing
-  - STIC internship (Tarragona)
+  - TIC internship (Tarragona)
