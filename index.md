@@ -69,7 +69,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 
 </ul>
 
-<br/><br/> 
+<br/><br/><br/><br/> 
 
 ###### Author's accomplishments <a name="education"></a>
 
