@@ -10,9 +10,7 @@ title: Axel code portfolio
 3. [Education](#education)
 
 #### Self introduction <a name="introduction"></a>
-Diligent and driven Cibersecurity student looking to leverage excellent writing and communication skills. 
-
-Eager to further develop researching and interviewing skills at internship.
+Diligent and driven Higher degree technician in Administrator of Computer Systems in the Network and 3D Animator, Games and Interactive Environments from Spain.
 
 #### Projects <a name="projects"></a>
 
@@ -75,5 +73,5 @@ Eager to further develop researching and interviewing skills at internship.
 - Science and Technology High School; INS Jaume I (Salou)
 - 3D animation, games and interactive environments; ILERNA (Lleida)
   - Internship in interior design (Lleida)
-- ASIX Computer Systems Network Administration; Institut Vidal i Barraquer (Tarragona) *currenly coursing
-  - TIC internship (Tarragona)
+- ASIX Computer Systems Network Administration; Institut Vidal i Barraquer (Tarragona)
+  - TIC Service internship (Tarragona)
