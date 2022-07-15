@@ -69,6 +69,8 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 
 </ul>
 
+<br/><br/> 
+
 ###### Author's accomplishments <a name="education"></a>
 
 - Science and Technology High School; INS Jaume I (Salou)
