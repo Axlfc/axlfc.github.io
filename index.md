@@ -57,14 +57,20 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 <br/><br/> 
 <li><a href="https://github.com/Axlfc/edit-movie" target="_blank" name="EditMovie">edit-movie</a></li>
 - Set of functional tools to control video and audio editing using moviepy.
+<br/>
+  <code> git clone https://gitlab.com/Axlfc/edit-movie /home/username/Desktop/git/edit-movie </code>
 <br/><br/> 
 
 <li><a href="https://github.com/Afaces/afaces.github.io" target="_blank" name="Afaces">Afaces web</a></li>
 - Generate automatically webpage document displaying song catalogue from artist music albums and webpage code for web <a href="https://afaces.tk" target="_blank" name="afaces.tk">afaces.tk</a>
+<br/>
+  <code> git clone https://gitlab.com/Afaces/afaces.github.io /home/username/Desktop/git/afaces </code>
 <br/><br/> 
 
 <li><a href="https://github.com/Afaces/afaces-nft" target="_blank" name="AfacesNft">afaces-nft</a></li>
 - Generate custom nft automatically with python
+<br/>
+  <code> git clone https://gitlab.com/Afaces/afaces-nft /home/username/Desktop/git/afaces-nft </code>
 <br/><br/> 
 </ul>
 
