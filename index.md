@@ -65,6 +65,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 
 <li><a href="https://github.com/Afaces/afaces-nft" target="_blank" name="AfacesNft">afaces-nft</a></li>
   - Generate custom nft automatically with python
+<br/><br/>
 </ul>
 
 
