@@ -29,43 +29,44 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 #### Projects details <a name="projectsdetails"></a>
 <ul>
 <li><a href="https://github.com/Axlfc/axlfc.github.io" target="_blank" name="GithubWebpage">axlfc.github.io</a></li>
-  - Porfolio in form of webpage using bootstrap and github pages.
+- Porfolio in form of webpage using bootstrap and github pages.
   <br/>
   <code> git clone https://github.com/Axlfc/axlfc.github.io /home/username/Desktop/git/gitlab/axlfc.github.io </code>  
 <br/><br/> 
 <li><a href="https://github.com/AleixMT/Linux-Auto-Customizer" target="_blank" name="Customizer">Customizer</a></li>
-  - It houses over 200 customization and installation features everything being programmed in 100% shell (<code>bash</code>).
+- It houses over 200 customization and installation features everything being programmed in 100% shell (<code>bash</code>).
   <br/>
   <code> git clone https://gitlab.com/AleixMT/Linux-Auto-Customizer /home/username/Desktop/git/Customizer </code>
 <br/><br/>
 <li><a href="https://github.com/Axlfc/useful-links" target="_blank" name="UsefulLinks">Useful links</a></li>
-  - Collection of internet urls and book names, it contains some few articles about computer science and programming strategies and author's own code references.
+- Collection of internet urls and book names, it contains some few articles about computer science and programming strategies and author's own code references.
   <br/>
   <code> git clone https://gitlab.com/Axlfc/useful-links /home/username/Desktop/git/useful-links </code>
 <br/><br/> 
 <li><a href="https://github.com/Axlfc/get-winget" target="_blank" name="GetWinget">get-winget</a></li>
-  - winget (Window's package manager) installation via commands in PowerShell or cmd.
+- winget (Window's package manager) installation via commands in PowerShell or cmd.
 
-  - clone repository in windows machine
-  - via powershell or cmd, navigate to the cloned folder and run the script.
+- clone repository in windows machine
+- via powershell or cmd, navigate to the cloned folder and run the script.
 <br/><br/> 
 
 <li><a href="https://github.com/ScriptsStudio/ScriptsStudio" target="_blank" name="ScriptsStudio">ScriptsStudio</a></li>
-  - Scripts to automate tasks in Linux, Android, Windows & Mac with a nice UI interface for system administrators and normal users...
+- Scripts to automate tasks in Linux, Android, Windows & Mac with a nice UI interface for system administrators and normal users...
   <br/>
    <code> git clone https://github.com/ScriptsStudio/ScriptsStudio /home/username/Desktop/git/ScriptsStudio </code>
 <br/><br/> 
 <li><a href="https://github.com/Axlfc/edit-movie" target="_blank" name="EditMovie">edit-movie</a></li>
-  - Set of functional tools to control video and audio editing using moviepy.
+- Set of functional tools to control video and audio editing using moviepy.
 <br/><br/> 
 
 <li><a href="https://github.com/Afaces/afaces.github.io" target="_blank" name="Afaces">Afaces web</a></li>
-  - Generate automatically webpage document displaying song catalogue from artist music albums and webpage code for web <a href="https://afaces.tk" target="_blank" name="afaces.tk">
+- Generate automatically webpage document displaying song catalogue from artist music albums and webpage code for web <a href="https://afaces.tk" target="_blank" name="afaces.tk">
 <br/><br/> 
 
 <li><a href="https://github.com/Afaces/afaces-nft" target="_blank" name="AfacesNft">afaces-nft</a></li>
-  - Generate custom nft automatically with python
+- Generate custom nft automatically with python
 <br/><br/>
+
 </ul>
 
 
