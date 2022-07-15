@@ -60,7 +60,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 <br/><br/> 
 
 <li><a href="https://github.com/Afaces/afaces.github.io" target="_blank" name="Afaces">Afaces web</a></li>
-- Generate automatically webpage document displaying song catalogue from artist music albums and webpage code for web <a href="https://afaces.tk" target="_blank" name="afaces.tk">
+- Generate automatically webpage document displaying song catalogue from artist music albums and webpage code for web <a href="https://afaces.tk" target="_blank" name="afaces.tk">afaces.tk</a>
 <br/><br/> 
 
 <li><a href="https://github.com/Afaces/afaces-nft" target="_blank" name="AfacesNft">afaces-nft</a></li>
