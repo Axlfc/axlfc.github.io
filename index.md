@@ -65,13 +65,10 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 
 <li><a href="https://github.com/Afaces/afaces-nft" target="_blank" name="AfacesNft">afaces-nft</a></li>
 - Generate custom nft automatically with python
-<br/><br/>
-
+<br/><br/> 
 </ul>
 
-<br/><br/><br/><br/> 
-
-###### Author's accomplishments <a name="education"></a>
+#### Author's accomplishments <a name="education"></a>
 
 - Science and Technology High School; INS Jaume I (Salou)
 - 3D animation, games and interactive environments; ILERNA (Lleida)
