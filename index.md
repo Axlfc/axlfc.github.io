@@ -67,6 +67,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
   - Generate custom nft automatically with python
 <br/><br/> 
 </ul>
+<br/><br/> 
 
 #### Author's accomplishments <a name="education"></a>
 
