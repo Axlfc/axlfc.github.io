@@ -69,8 +69,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 
 </ul>
 
-
-#### Author's accomplishments <a name="education"></a>
+###### Author's accomplishments <a name="education"></a>
 
 - Science and Technology High School; INS Jaume I (Salou)
 - 3D animation, games and interactive environments; ILERNA (Lleida)
