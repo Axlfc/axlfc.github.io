@@ -80,7 +80,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
   <code> git clone https://gitlab.com/Afaces/afaces-nft /home/username/Desktop/git/afaces-nft </code>
 <br/><br/> 
     
-<li><a href="https://github.com/Axlfc/UE5-python" target="_blank" name="AfacesNft">afaces-nft</a></li>
+<li><a href="https://github.com/Axlfc/UE5-python" target="_blank" name="UE5Python">UE5-Python</a></li>
 - Code to test Python Unreal Engine 5 capabilites, a twitter bot and ChatGPT scripts.
 <br/>
   <code> git clone https://github.com/Axlfc/UE5-python /home/username/Desktop/git/UE5-python </code>
