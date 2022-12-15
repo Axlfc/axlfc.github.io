@@ -81,7 +81,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 <br/><br/> 
     
 <li><a href="https://github.com/Axlfc/UE5-python" target="_blank" name="UE5Python">UE5-Python</a></li>
-- Code to test Python Unreal Engine 5 capabilites, a twitter bot and ChatGPT scripts.
+-  Code to test Python Unreal Engine 5 capabilites, Blender & HoudiniFX scripts for testing, a twitter bot, reddit script and ChatGPT scripts and utilities. 
 <br/>
   <code> git clone https://github.com/Axlfc/UE5-python /home/username/Desktop/git/UE5-python </code>
 <br/><br/> 
