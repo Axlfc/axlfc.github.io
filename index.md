@@ -89,8 +89,9 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 
 #### Author's accomplishments <a name="education"></a>
 
-- Science and Technology High School; INS Jaume I (Salou)
+- Science and Technology High School; INS Jaume I (Salou, Tarragona)
 - 3D animation, games and interactive environments; ILERNA (Lleida)
   - Internship in interior design (Lleida)
 - ASIX Computer Systems Network Administration; Institut Vidal i Barraquer (Tarragona)
   - TIC Service internship (Tarragona)
+- Specialization Course in Video Game Development and Virtual Reality; CIFP Tartanga LHII (Erandio, Biscay)
