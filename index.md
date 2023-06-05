@@ -21,10 +21,8 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 #### Projects <a name="projects"></a>
 
 -   🚧  [This same webpage](#GithubWebpage)
--   🚧  [Customizer](#Customizer)
 -   ✔️  [Useful links](#UsefulLinks)
 -   🪟  [get-winget](#GetWinget)
--   🐧🤖🪟🚧🎯🐍  [ScriptsStudio](#ScriptsStudio)
 -   🐧🐍  [edit-movie](#EditMovie)
 -   🎼  [afaces web](#Afaces)
 -   🎼  [afaces-nft](#AfacesNft)
@@ -40,11 +38,6 @@ Diligent and driven Higher degree technician in Administrator of Computer System
   <br/>
   <code> git clone https://github.com/Axlfc/axlfc.github.io /home/username/Desktop/git/gitlab/axlfc.github.io </code>  
 <br/><br/> 
-<li><a href="https://github.com/AleixMT/Linux-Auto-Customizer" target="_blank" name="Customizer">Customizer</a></li>
-- It houses over 200 customization and installation features everything being programmed in 100% shell (<code>bash</code>).
-  <br/>
-  <code> git clone https://gitlab.com/AleixMT/Linux-Auto-Customizer /home/username/Desktop/git/Customizer </code>
-<br/><br/>
 <li><a href="https://github.com/Axlfc/useful-links" target="_blank" name="UsefulLinks">Useful links</a></li>
 - Collection of internet urls and book names, it contains some few articles about computer science and programming strategies and author's own code references.
   <br/>
@@ -57,11 +50,6 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 - via powershell or cmd, navigate to the cloned folder and run the script.
 <br/><br/> 
 
-<li><a href="https://github.com/ScriptsStudio/ScriptsStudio" target="_blank" name="ScriptsStudio">ScriptsStudio</a></li>
-- Scripts to automate tasks in Linux, Android, Windows & Mac with a nice UI interface for system administrators and normal users...
-  <br/>
-   <code> git clone https://github.com/ScriptsStudio/ScriptsStudio /home/username/Desktop/git/ScriptsStudio </code>
-<br/><br/> 
 <li><a href="https://github.com/Axlfc/edit-movie" target="_blank" name="EditMovie">edit-movie</a></li>
 - Set of functional tools to control video and audio editing using moviepy.
 <br/>
