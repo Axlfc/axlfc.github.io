@@ -21,7 +21,6 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 #### Projects <a name="projects"></a>
 
 -   🚧  [This same webpage](#GithubWebpage)
--   ✔️  [Useful links](#UsefulLinks)
 -   🪟  [get-winget](#GetWinget)
 -   🐧🐍  [edit-movie](#EditMovie)
 -   🎼  [afaces web](#Afaces)
@@ -38,11 +37,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
   <br/>
   <code> git clone https://github.com/Axlfc/axlfc.github.io /home/username/Desktop/git/gitlab/axlfc.github.io </code>  
 <br/><br/> 
-<li><a href="https://github.com/Axlfc/useful-links" target="_blank" name="UsefulLinks">Useful links</a></li>
-- Collection of internet urls and book names, it contains some few articles about computer science and programming strategies and author's own code references.
-  <br/>
-  <code> git clone https://gitlab.com/Axlfc/useful-links /home/username/Desktop/git/useful-links </code>
-<br/><br/> 
+
 <li><a href="https://github.com/Axlfc/get-winget" target="_blank" name="GetWinget">get-winget</a></li>
 - winget (Window's package manager) installation via commands in PowerShell or cmd.
 
