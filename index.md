@@ -83,3 +83,4 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 - ASIX Computer Systems Network Administration; Institut Vidal i Barraquer (Tarragona)
   - TIC Service internship (Tarragona)
 - Specialization Course in Video Game Development and Virtual Reality; CIFP Tartanga LHII (Erandio, Biscay)
+  - VR Programmer Trainee for industry and emergency services (Deusto, Biscay)
