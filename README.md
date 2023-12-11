@@ -38,22 +38,55 @@ The webpage is built using Bootstrap 4 for GitHub Pages and serves as a showcase
    - Stage your changes and commit them to your local repository:
      ```bash
      git add .
-     git commit -m "Initial commit"
+     git commit -am "First commit"
      ```
 
    **Explanation:**
    - `git add .` stages all changes for the next commit.
-   - `git commit -m "Initial commit"` creates a commit with a message describing the changes.
+   - `git commit -am "Initial commit"` creates a commit with a message describing the changes.
 
 5. **Push Your Changes:**
-   - Push your changes to the GitHub repository:
-     ```bash
-     git push origin main
-     ```
 
-   **Explanation:**
-   - `git push` sends your committed changes to the remote repository on GitHub.
-   - `origin` refers to the remote repository's alias, and `main` is the branch you're pushing to.
+After making and committing your changes locally, the next step is to push those changes to your GitHub repository. 
+This process updates the remote repository on GitHub with your latest changes.
+
+### Command Explanation:
+
+Use the following command to push your committed changes:
+
+```bash
+  git push origin main
+```
+
+This command comprises two main components:
+
+- git push:
+        The git push command is used to upload local changes to a remote repository, in this case, GitHub.
+- origin main:
+        The origin refers to the remote repository's alias. When you cloned your repository, Git automatically set up an alias called origin for the URL of the repository on GitHub.
+        main represents the branch you are pushing to. In Git, the term "main" typically refers to the main branch of your repository, also known as the default branch.
+
+What Happens When You Push:
+
+- Staging Changes:
+        Before pushing, ensure you have staged your changes using git add . and committed them using git commit -m "Your commit message". This prepares your changes for upload.
+
+- Connecting to GitHub:
+        Running git push establishes a connection to the GitHub repository using the origin alias.
+
+- Uploading Changes:
+        The changes you committed locally are uploaded to the remote repository on GitHub.
+
+- Updating the Repository:
+        The main branch on GitHub is updated with your latest changes, making your updated code accessible to others who may collaborate on the project.
+
+- Note:
+
+    If you're working on a branch other than main, replace main with the name of your current branch.
+
+    Always ensure that your local branch is up-to-date with the remote branch before pushing changes to avoid conflicts.
+
+Now, with your changes successfully pushed, others can view and collaborate on the updated codebase on GitHub.
 
 6. **Visit Your Webpage:**
    - After a few minutes, your webpage will be live at `https://username.github.io`.
