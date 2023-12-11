@@ -4,21 +4,21 @@ This repository contains the source code for my personal portfolio webpage hoste
 
 [![Visit My Code Portfolio](https://img.shields.io/badge/Visit-Code%20Portfolio-blue?style=for-the-badge&logo=github)](https://axlfc.github.io)
 
-
 ## Overview
 
 The webpage is built using Bootstrap 4 for GitHub Pages and serves as a showcase for my projects, skills, and accomplishments.
 
 ## GitHub Pages Overview
 
-[GitHub Pages](https://pages.github.com/) is a static site hosting service provided by GitHub, allowing users to create and publish webpages directly from their GitHub repositories. GitHub Pages supports Jekyll, a static site generator, and provides flexibility with HTML, CSS, and JavaScript for building your site.
+[GitHub Pages](https://pages.github.com/) is a static site hosting service provided by GitHub, allowing users to create and publish webpages directly from their GitHub repositories. 
+GitHub Pages supports Jekyll, a static site generator, and provides flexibility with HTML, CSS, and JavaScript for building your site.
 
 ## Creating Your Own GitHub Pages
 
 1. **Create a Repository:**
    - Go to your GitHub profile.
    - Click on the "Repositories" tab.
-   - Create a new repository with the name `username.github.io`, replacing "username" with your GitHub username.
+   - Create a new repository with the name `yourusername.github.io`, replacing "yourusername" with your GitHub username.
 
 2. **Clone the Repository:**
    - Open your terminal or Git Bash.
@@ -29,13 +29,13 @@ The webpage is built using Bootstrap 4 for GitHub Pages and serves as a showcase
 
    **Explanation:**
    - Use `git clone` to clone a repository from a URL.
-   - The URL is the address of your GitHub repository, creating a copy on your local machine.
+   - The URL is the address of your GitHub repository, creating a copy on your local machine in the current directory.
 
 3. **Add Your Content:**
    - Customize your webpage by adding HTML, CSS, and other assets.
 
    **Explanation:**
-   - Create or modify files in the cloned repository based on your webpage's content.
+   - Create or modify files in the cloned repository based on your webpage's content in ```index.md``` and other files.
 
 4. **Commit Your Changes:**
    - Stage your changes and commit them to your local repository:
@@ -66,13 +66,17 @@ This command comprises two main components:
 - git push:
         The git push command is used to upload local changes to a remote repository, in this case, GitHub.
 - origin main:
-        The origin refers to the remote repository's alias. When you cloned your repository, Git automatically set up an alias called origin for the URL of the repository on GitHub.
-        main represents the branch you are pushing to. In Git, the term "main" typically refers to the main branch of your repository, also known as the default branch.
+        The origin refers to the remote repository's alias. 
+        When you cloned your repository, Git automatically set up an alias called origin for the URL of the repository on GitHub.
+        ```main``` represents the branch you are pushing to. 
+        In Git, the term "main" typically refers to the main branch of your repository, also known as the default branch.
 
 What Happens When You Push:
 
 - Staging Changes:
-        Before pushing, ensure you have staged your changes using git add . and committed them using git commit -m "Your commit message". This prepares your changes for upload.
+        Before pushing, ensure you have staged your changes using ```git add .``` and committed them using git commit -m "Your commit message". 
+        The '.' in the command 'git add .' represents all files in the current directory but we can specify them individually.
+        This prepares your changes for upload.
 
 - Connecting to GitHub:
         Running git push establishes a connection to the GitHub repository using the origin alias.
