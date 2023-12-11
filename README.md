@@ -2,6 +2,9 @@
 
 This repository contains the source code for my personal portfolio webpage hosted on GitHub Pages.
 
+[![Visit My Code Portfolio](https://img.shields.io/badge/Visit-Code%20Portfolio-blue?style=for-the-badge&logo=github)](https://axlfc.github.io)
+
+
 ## Overview
 
 The webpage is built using Bootstrap 4 for GitHub Pages and serves as a showcase for my projects, skills, and accomplishments.
@@ -38,7 +41,7 @@ The webpage is built using Bootstrap 4 for GitHub Pages and serves as a showcase
    - Stage your changes and commit them to your local repository:
      ```bash
      git add .
-     git commit -am "First commit"
+     git commit -am "Initial commit with project structure".
      ```
 
    **Explanation:**
@@ -80,16 +83,20 @@ What Happens When You Push:
 - Updating the Repository:
         The main branch on GitHub is updated with your latest changes, making your updated code accessible to others who may collaborate on the project.
 
+You can find the name of your current branch (e.g., ```git branch```).
+
 - Note:
 
     If you're working on a branch other than main, replace main with the name of your current branch.
 
     Always ensure that your local branch is up-to-date with the remote branch before pushing changes to avoid conflicts.
 
+    You can ensure that GitHub Pages is enabled for the repository and that the source branch (e.g., main or master) is correctly configured.
+
 Now, with your changes successfully pushed, others can view and collaborate on the updated codebase on GitHub.
 
 6. **Visit Your Webpage:**
-   - After a few minutes, your webpage will be live at `https://username.github.io`.
+   - After a few minutes, your webpage will be live at `https://yourusername.github.io`.
 
 ## Testing Changes Locally
 
