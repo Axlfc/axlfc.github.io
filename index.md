@@ -9,12 +9,21 @@ title: Axel code portfolio
 
 ## Table of contents
 1. [Introduction](#introduction)
-2. [Projects](#projects)
+2. [Articles](#articles)
+3. [Projects](#projects)
     1. [Projects details](#projectsdetails)
-3. [Education](#education)
+4. [Education](#education)
 
 #### Self introduction <a name="introduction"></a>
 Diligent and driven Higher degree technician in Administrator of Computer Systems in the Network and 3D Animator, Games and Interactive Environments from Spain.
+
+#### Articles <a name="articles"></a>
+
+- [Tu Guía Completa de Iniciado con Git](https://medium.com/@axelfernandezcurros/tu-gu%C3%ADa-completa-de-iniciado-con-git-b6b475bb6991)
+- [Iniciando con Python: Tu Primer Programa ‘Hola, Mundo!](https://medium.com/@axelfernandezcurros/iniciando-con-python-tu-primer-programa-hola-mundo-d4bef62103fc)
+- [Programación en Python para Principiantes: Una Guía Integral](https://medium.com/@axelfernandezcurros/programaci%C3%B3n-en-python-para-principiantes-una-gu%C3%ADa-integral-7e0b87016f84)
+- [Guía Completa para Crear y Desarrollar tu Página Web con GitHub Pages, HTML, CSS, JavaScript y Git](https://medium.com/@axelfernandezcurros/gu%C3%ADa-completa-para-crear-y-desarrollar-tu-p%C3%A1gina-web-con-github-pages-html-css-javascript-y-git-3cc06c104be7)
+
 
 #### Projects <a name="projects"></a>
 
