@@ -32,23 +32,16 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 -   🐍  [file_converters](#FileConverters)
 -   🐍  [ScriptsEditor](#ScriptsEditor)
 -   🐍  [find-a-job](#FindAJob)
--   🐚  [Linux-Auto-Customizer](#LinuxAutoCustomizer)
 -   🐍  [UE5-python](#UE5Python)
 -   🤖  [ReplikaAI](#ReplikaAI)
 -   🐍  [OPTIFonts](#OPTIFonts)
 -   🐍  [gitignore](#Gitignore)
 -   🐍  [github-scraper](#GitHubScraper)
 -   🎬  [edit-movie](#EditMovie)
--   ☕  [JavaDataStructures](#JavaDataStructures)
 -   🐍  [manage_firebase_collection](#ManageFirebaseCollection)
 -   📱  [locate_phone_owners](#LocatePhoneOwners)
 -   💼  [WalletRentCalculator](#WalletRentCalculator)
 -   📱  [optimize-phone-billing-rates](#OptimizePhoneBillingRates)
--   🐍  [converters](#Converters)
--   🐍  [subnetter](#Subnetter)
--   🐍  [SI](#SI)
--   😜  [AlgorithmsExercises](#AlgorithmsExercises)
--   🖥️  [WebApuntes](#WebApuntes)
 
 #### Projects details <a name="projectsdetails"></a>
 
@@ -81,12 +74,6 @@ Diligent and driven Higher degree technician in Administrator of Computer System
         - Automate the bulk sending of Curriculum Vitae (CV) to companies. Streamline your job application process by easily reaching out to multiple companies with just a few clicks.
           <br/>
           <code> git clone https://github.com/Axlfc/find-a-job /home/username/Desktop/git/find-a-job </code>
-        <br/><br/> 
-
-    <li><a href="https://github.com/Axlfc/Linux-Auto-Customizer" target="_blank" name="LinuxAutoCustomizer">Linux-Auto-Customizer</a></li>
-        - Bash scripts to automatize the installation and uninstallation of a batch of precoded features in a Linux environment.
-          <br/>
-          <code> git clone https://github.com/Axlfc/Linux-Auto-Customizer /home/username/Desktop/git/Linux-Auto-Customizer </code>
         <br/><br/> 
 
     <li><a href="https://github.com/Axlfc/UE5-python" target="_blank" name="UE5Python">UE5-python</a></li>
@@ -125,11 +112,6 @@ Diligent and driven Higher degree technician in Administrator of Computer System
           <code> git clone https://github.com/Axlfc/edit-movie /home/username/Desktop/git/edit-movie </code>
         <br/><br/> 
 
-    <li><a href="https://github.com/Axlfc/JavaDataStructures" target="_blank" name="JavaDataStructures">JavaDataStructures</a></li>
-        - Java data structures project.
-          <br/>
-          <code> git clone https://github.com/Axlfc/JavaDataStructures /home/username/Desktop/git/JavaDataStructures </code>
-        <br/><br/>
 
     <li><a href="https://github.com/Axlfc/manage_firebase_collection" target="_blank" name="ManageFirebaseCollection">manage_firebase_collection</a></li>
         - Connection with Python and Firebase collection.
@@ -154,38 +136,9 @@ Diligent and driven Higher degree technician in Administrator of Computer System
           <br/>
           <code> git clone https://github.com/Axlfc/optimize-phone-billing-rates /home/username/Desktop/git/optimize-phone-billing-rates </code>
         <br/><br/> 
-
-    <li><a href="https://github.com/Axlfc/converters" target="_blank" name="Converters">converters</a></li>
-        - Converts to decimal using Python.
-          <br/>
-          <code> git clone https://github.com/Axlfc/converters /home/username/Desktop/git/converters </code>
-        <br/><br/>
-
-    <li><a href="https://github.com/Axlfc/subnetter" target="_blank" name="Subnetter">subnetter</a></li>
-        - Python project for subnetting.
-          <br/>
-          <code> git clone https://github.com/Axlfc/subnetter /home/username/Desktop/git/subnetter </code>
-        <br/><br/> 
-
-    <li><a href="https://github.com/Axlfc/SI" target="_blank" name="SI">SI</a></li>
-        - A Python project with a mysterious "Yes!" message.
-          <br/>
-          <code> git clone https://github.com/Axlfc/SI /home/username/Desktop/git/SI </code>
-        <br/><br/> 
-
-    <li><a href="https://github.com/Axlfc/AlgorithmsExercises" target="_blank" name="AlgorithmsExercises">AlgorithmsExercises</a></li>
-        - A C project with a playful ":P" message.
-          <br/>
-          <code> git clone https://github.com/Axlfc/AlgorithmsExercises /home/username/Desktop/git/AlgorithmsExercises </code>
-        <br/><br/> 
-
-    <li><a href="https://github.com/Axlfc/WebApuntes" target="_blank" name="WebApuntes">WebApuntes</a></li>
-        - PHP code for a webpage.
-          <br/>
-          <code> git clone https://github.com/Axlfc/WebApuntes /home/username/Desktop/git/WebApuntes </code>
-        <br/><br/> 
 </ul>
 
+        
 #### Author's accomplishments <a name="education"></a>
 
 - Science and Technology High School; INS Jaume I (Salou, Tarragona)
