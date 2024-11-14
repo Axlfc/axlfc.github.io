@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <style>
@@ -13,44 +12,25 @@
             margin-bottom: 20px;
         }
         
-        .search-box {
-            width: 100%;
-            max-width: 600px;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #7e9db9;
-            border-radius: 4px;
+        /* Hide default Google branding if desired */
+        .gsc-control-cse {
+            padding: 0 !important;
+            border: none !important;
         }
         
-        .search-button {
-            padding: 10px 20px;
-            background-color: #4285f4;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        .search-button:hover {
-            background-color: #357abd;
+        /* Ensure results appear below the search box */
+        .gcse-searchresults-only {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="search-container">
-        <img src="images/gato.jpg" alt="Gatito" class="cat-image">
+        <img src="gato.jpg" alt="Gatito" class="cat-image">
         
-        <div class="gcse-search-box">
-            <script async src="https://cse.google.com/cse.js?cx=b735149c4c66c416c"></script>
-            <div class="gcse-searchbox-only" data-resultsUrl="results.html">
-                <form>
-                    <input type="search" class="search-box">
-                    <button type="submit" class="search-button">Salva al gatito</button>
-                </form>
-            </div>
-        </div>
-        
-        <div class="gcse-searchresults"></div>
+        <!-- Search box -->
+        <script async src="https://cse.google.com/cse.js?cx=b735149c4c66c416c"></script>
+        <div class="gcse-search" data-buttonText="Salva al gatito"></div>
     </div>
 </body>
 </html>
