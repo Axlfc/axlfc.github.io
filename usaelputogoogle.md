@@ -16,11 +16,10 @@
         
         .search-box {
             position: absolute;
-            bottom: 30px;
+            bottom: 0px;
             left: 50%;
             transform: translateX(-50%);
             width: 80%;
-            display: flex;
         }
 
         /* Customize the search input box */
