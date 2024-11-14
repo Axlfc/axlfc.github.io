@@ -7,46 +7,22 @@
             max-width: 800px;
             margin: 20px auto;
             text-align: center;
-            position: relative;
         }
         
         .cat-image {
-            width: 100%;
-            max-height: 300px;
+            max-width: 300px;
+            margin-bottom: 20px;
         }
         
-        .search-box {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            display: flex;
+        /* Hide default Google branding if desired */
+        .gsc-control-cse {
+            padding: 0 !important;
+            border: none !important;
         }
-
-        /* Customize the search input box */
-        .gcse-search input.gsc-input {
-            height: 30px;
-            width: calc(100% - 120px);
-            font-size: 16px;
-            padding: 0 10px;
-        }
-
-        /* Custom styling for the search button */
-        .gsc-search-button-v2 {
-            width: 120px;
-            font-size: 0 !important;
-        }
-
-        .gsc-search-button-v2:after {
-            font-size: 14px;
-            padding: 0 10px;
-            display: inline-block;
-        }
-
-        /* Hide the search icon */
-        .gsc-search-button-v2 svg {
-            display: none !important;
+        
+        /* Ensure results appear below the search box */
+        .gcse-searchresults-only {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -55,10 +31,8 @@
         <img id="randomImage" src="" alt="Imagen aleatoria" class="cat-image">
         
         <!-- Search box -->
-        <div class="search-box">
-            <script async src="https://cse.google.com/cse.js?cx=b735149c4c66c416c"></script>
-            <div class="gcse-search"></div>
-        </div>
+        <script async src="https://cse.google.com/cse.js?cx=b735149c4c66c416c"></script>
+        <div class="gcse-search"></div>
     </div>
 
     <script>
@@ -73,11 +47,9 @@
         // Randomly select an image and button text
         const keys = Object.keys(images);
         const randomKey = keys[Math.floor(Math.random() * keys.length)];
-        const randomText = images[randomKey];
 
-        // Set the random image source and button text
+        // Set the random image source
         document.getElementById("randomImage").src = randomKey;
-        document.querySelector(".gsc-search-button-v2:after").textContent = randomText;
     </script>
 </body>
 </html>
