@@ -26,7 +26,7 @@
 </head>
 <body>
     <div class="search-container">
-        <img src="gato.jpg" alt="Gatito" class="cat-image">
+        <img src="images/gato.jpg" alt="Gatito" class="cat-image">
         
         <!-- Search box -->
         <script async src="https://cse.google.com/cse.js?cx=b735149c4c66c416c"></script>
