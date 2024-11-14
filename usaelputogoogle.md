@@ -19,7 +19,7 @@
             bottom: 0px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80%;
+            width: 100%;
         }
 
         /* Customize the search input box */
@@ -37,8 +37,7 @@
 
         .gsc-search-button-v2:after {
             content: 'Salva al gatito' !important;
-            font-size: 14px;
-            padding: 0 10px;
+            font-size: 11px;
             display: inline-block;
         }
 
