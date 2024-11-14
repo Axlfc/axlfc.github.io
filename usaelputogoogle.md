@@ -31,8 +31,24 @@
         <img id="randomImage" src="" alt="Imagen aleatoria" class="cat-image">
         
         <!-- Search box -->
-        <script async src="https://cse.google.com/cse.js?cx=b735149c4c66c416c"></script>
-        <div class="gcse-search" data-hl="es" data-gname="randomImageSearch" data-title="[SEARCHTEXT]"></div>
+        <div class="gcse-search" data-hl="es" data-gname="randomImageSearch">
+            <div class="gsc-control-cse">
+                <div class="gsc-search-box-tools">
+                    <div class="gsc-search-box">
+                        <input type="text" placeholder="Buscar" class="gsc-input">
+                        <div class="gsc-search-button">
+                            <button class="gsc-search-button-v2" title="" aria-label="Buscar" type="button">
+                                <svg class="gsc-search-button-v2-spacer" width="13" height="13" viewBox="0 0 13 13">
+                                    <title>Buscar</title>
+                                    <path d="M12.706 12.293l-0.707 0.707-4.058-4.061c-1.356 0.96-2.99 1.526-4.753 1.526-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8c0 1.763-0.566 3.397-1.526 4.753z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="buttonText" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         // List of images and corresponding button texts
@@ -49,7 +65,8 @@
         // Set the random image source
         document.getElementById("randomImage").src = randomKey;
         // Set the button text
-        document.querySelector('.gcse-search').dataset.title = buttonText;
+        document.getElementById("buttonText").textContent = buttonText;
+        document.getElementById("buttonText").style.display = "inline";
     </script>
 </body>
 </html>
