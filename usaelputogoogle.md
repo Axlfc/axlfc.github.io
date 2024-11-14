@@ -28,7 +28,6 @@
             height: 30px;
             width: calc(100% - 100px);
             font-size: 16px;
-            padding: 0 10px;
         }
 
         /* Custom styling for the search button */
