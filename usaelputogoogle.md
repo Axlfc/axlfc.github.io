@@ -32,9 +32,8 @@
         
         <!-- Search box -->
         <script async src="https://cse.google.com/cse.js?cx=b735149c4c66c416c"></script>
-        <div class="gcse-search"></div>
+        <div class="gcse-search" data-hl="es" data-gname="randomImageSearch" data-title="[SEARCHTEXT]"></div>
     </div>
-
     <script>
         // List of images and corresponding button texts
         const images = {
@@ -43,13 +42,14 @@
             "images/claudio.jpg": "Fregquishimo",
             "images/marlo.jpg": "Dale al puto botón"
         };
-
         // Randomly select an image and button text
         const keys = Object.keys(images);
         const randomKey = keys[Math.floor(Math.random() * keys.length)];
-
+        const buttonText = images[randomKey];
         // Set the random image source
         document.getElementById("randomImage").src = randomKey;
+        // Set the button text
+        document.querySelector('.gcse-search').dataset.title = buttonText;
     </script>
 </body>
 </html>
