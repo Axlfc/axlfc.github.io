@@ -16,7 +16,7 @@
         
         .search-box {
             position: absolute;
-            bottom: 0px;
+            bottom: -25px;
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
