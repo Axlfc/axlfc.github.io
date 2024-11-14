@@ -36,10 +36,6 @@
             background-color: #0056b3;
         }
 
-        .hidden {
-            display: none;
-        }
-
         /* Hide the default magnifying glass icon */
         .gsc-search-button-v2 svg {
             display: none !important;
@@ -92,13 +88,6 @@
             const imageData = images[key];
             document.getElementById("randomImage").src = imageData.src;
             updateSearchButtonText(imageData.text);
-
-            // Hide all buttons initially
-            const buttons = document.querySelectorAll('.image-button');
-            buttons.forEach(button => button.classList.add('hidden'));
-
-            // Show the button for the selected image
-            document.querySelector(`button[onclick="setImage('${key}')"]`).classList.remove('hidden');
         }
 
         // Function to set a random image on page load
