@@ -22,6 +22,22 @@
         .gcse-searchresults-only {
             margin-top: 20px;
         }
+
+        /* Custom styling for the search button */
+        .gsc-search-button-v2 {
+            font-size: 0px !important;
+        }
+
+        .gsc-search-button-v2:after {
+            content: 'Salva al gatito' !important;
+            font-size: 14px !important;
+            padding: 0 10px;
+        }
+
+        /* Optional: Hide the search icon */
+        .gsc-search-button-v2 svg {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
@@ -30,7 +46,7 @@
         
         <!-- Search box -->
         <script async src="https://cse.google.com/cse.js?cx=b735149c4c66c416c"></script>
-        <div class="gcse-search" data-buttonText="Salva al gatito"></div>
+        <div class="gcse-search"></div>
     </div>
 </body>
 </html>
