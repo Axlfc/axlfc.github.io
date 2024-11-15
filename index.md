@@ -35,7 +35,6 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 -   🐍  [UE5-python](#UE5Python)
 -   🤖  [ReplikaAI](#ReplikaAI)
 -   🐍  [OPTIFonts](#OPTIFonts)
--   🐍  [gitignore](#Gitignore)
 -   🐍  [github-scraper](#GitHubScraper)
 -   🎬  [edit-movie](#EditMovie)
 -   🐍  [manage_firebase_collection](#ManageFirebaseCollection)
@@ -92,12 +91,6 @@ Diligent and driven Higher degree technician in Administrator of Computer System
         - Download & Install All OPTI Fonts using Python.
           <br/>
           <code> git clone https://github.com/Axlfc/OPTIFonts /home/username/Desktop/git/OPTIFonts </code>
-        <br/><br/> 
-
-    <li><a href="https://github.com/Axlfc/gitignore" target="_blank" name="Gitignore">gitignore</a></li>
-        - A collection of useful .gitignore templates.
-          <br/>
-          <code> git clone https://github.com/Axlfc/gitignore /home/username/Desktop/git/gitignore </code>
         <br/><br/> 
 
     <li><a href="https://github.com/Axlfc/github-scraper" target="_blank" name="GitHubScraper">github-scraper</a></li>
