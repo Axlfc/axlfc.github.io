@@ -7,7 +7,7 @@
             max-width: 800px;
             margin: 20px auto;
             text-align: center;
-            padding-bottom: 300px; /* Adds padding below the search box */
+            padding-bottom: 300px;
         }
         
         .cat-image {
@@ -36,36 +36,27 @@
             background-color: #0056b3;
         }
 
-        /* Hide the default magnifying glass icon */
         .gsc-search-button-v2 svg {
             display: none !important;
         }
 
-        /* Add custom text to the search button using pseudo-element */
         .gsc-search-button-v2::after {
-            content: attr(data-custom-text); /* Use a custom attribute for the button text */
+            content: attr(data-custom-text);
             font-size: 14px;
             color: white;
             padding: 0 10px;
         }
 
-        /* Ensure results appear below the search box */
         .gcse-searchresults-only {
             margin-top: 20px;
         }
     </style>
-    <!-- Google CSE Script -->
     <script async src="https://cse.google.com/cse.js?cx=b735149c4c66c416c"></script>
 </head>
 <body>
     <div class="search-container">
-        <!-- Random image display -->
         <img id="randomImage" src="images/gato.jpg" alt="Imagen aleatoria" class="cat-image">
-
-        <!-- Google Custom Search Box and Results -->
         <div class="gcse-search" data-hl="es" data-gname="randomImageSearch" data-title="[SEARCHTEXT]"></div>
-
-        <!-- Container for the image-switching buttons at the bottom -->
         <div class="button-container">
             <button class="image-button" onclick="setImage('gato')">Salva al gatito</button>
             <button class="image-button" onclick="setImage('carlos')">Salva al imperio</button>
@@ -83,19 +74,23 @@
             "marlo": { src: "images/marlo.jpg", text: "Dale al puto botón" }
         };
 
+        let currentImageKey = null;
+
         // Function to set a specific image and update search button text
         function setImage(key) {
             const imageData = images[key];
             document.getElementById("randomImage").src = imageData.src;
+            currentImageKey = key;
             updateSearchButtonText(imageData.text);
         }
 
         // Function to set a random image on page load
-        window.onload = function() {
+        function setRandomImage() {
             const keys = Object.keys(images);
             const randomKey = keys[Math.floor(Math.random() * keys.length)];
             setImage(randomKey);
-        };
+            return randomKey;
+        }
 
         // Function to update the search button text dynamically
         function updateSearchButtonText(text) {
@@ -105,16 +100,26 @@
             }
         }
 
-        // Ensures search button text updates once Google CSE has loaded
-        window.addEventListener('load', () => {
-            // Wait for the Google search button to load, then set the initial button text
-            setTimeout(() => {
+        // Initialize on page load
+        window.onload = function() {
+            // Set initial random image and store the key
+            currentImageKey = setRandomImage();
+            
+            // Set up an observer to ensure the button text is updated after Google CSE loads
+            const observer = new MutationObserver((mutations, obs) => {
                 const searchButton = document.querySelector('.gsc-search-button-v2');
                 if (searchButton) {
-                    updateSearchButtonText(images["gato"].text); // Set default text to initial image
+                    updateSearchButtonText(images[currentImageKey].text);
+                    obs.disconnect(); // Stop observing once we've updated the button
                 }
-            }, 500);
-        });
+            });
+
+            // Start observing the document for the search button to appear
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        };
     </script>
 </body>
 </html>
