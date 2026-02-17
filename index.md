@@ -3,7 +3,7 @@ layout: page
 title: Axel code portfolio
 ---
 
-[![Gist](https://img.shields.io/badge/gist.github-100000?style=for-the-badge&logo=github&logoColor=white)](https://gist.github.com/Axlfc) [![DEV.to](assets/images/icon/devto.png)](https://dev.to/axlfc) [![Medium](assets/images/icon/medium.png)](https://medium.com/@axelfernandezcurros) [![Twitter](assets/images/icon/twitter.png)](https://twitter.com/axelcurros)
+[![Gist](https://img.shields.io/badge/gist.github-100000?style=for-the-badge&logo=github&logoColor=white)](https://gist.github.com/Axlfc) [![DEV.to](assets/images/icon/devto.png)](https://dev.to/axlfc) [![Medium](assets/images/icon/medium.png)](https://medium.com/@axelfernandezcurros)
 
 ## Table of contents
 1. [Introduction](#introduction)
