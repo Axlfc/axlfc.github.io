@@ -22,6 +22,7 @@ Diligent and driven Higher degree technician in Videogame Development and Virtua
 - [Programación en Python para Principiantes: Una Guía Integral](https://medium.com/@axelfernandezcurros/programaci%C3%B3n-en-python-para-principiantes-una-gu%C3%ADa-integral-7e0b87016f84)
 - [Guía Completa para Crear y Desarrollar tu Página Web con GitHub Pages, HTML, CSS, JavaScript y Git](https://medium.com/@axelfernandezcurros/gu%C3%ADa-completa-para-crear-y-desarrollar-tu-p%C3%A1gina-web-con-github-pages-html-css-javascript-y-git-3cc06c104be7)
 - [Introducción al Formato Markdown](https://medium.com/@axelfernandezcurros/introducci%C3%B3n-al-formato-markdown-0486e5b47809)
+- [RuneScript: Redefiniendo el Desarrollo de Scripts con IA y Web3](https://medium.com/@axelfernandezcurros/runescript-redefiniendo-el-desarrollo-de-scripts-con-ia-y-web3-4a4577129f03)
 
 
 #### Projects <a name="projects"></a>
