@@ -13,7 +13,7 @@ title: Axel code portfolio
 4. [Education](#education)
 
 #### Self introduction <a name="introduction"></a>
-Diligent and driven Higher degree technician in Administrator of Computer Systems in the Network and 3D Animator, Games and Interactive Environments from Spain.
+Diligent and driven Higher degree technician in Videogame Development and Virtual Reality, Administrator of Computer Systems in the Network and 3D Animator, Games and Interactive Environments from Spain.
 
 #### Articles <a name="articles"></a>
 
@@ -21,6 +21,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 - [Iniciando con Python: Tu Primer Programa ‘Hola, Mundo!](https://medium.com/@axelfernandezcurros/iniciando-con-python-tu-primer-programa-hola-mundo-d4bef62103fc)
 - [Programación en Python para Principiantes: Una Guía Integral](https://medium.com/@axelfernandezcurros/programaci%C3%B3n-en-python-para-principiantes-una-gu%C3%ADa-integral-7e0b87016f84)
 - [Guía Completa para Crear y Desarrollar tu Página Web con GitHub Pages, HTML, CSS, JavaScript y Git](https://medium.com/@axelfernandezcurros/gu%C3%ADa-completa-para-crear-y-desarrollar-tu-p%C3%A1gina-web-con-github-pages-html-css-javascript-y-git-3cc06c104be7)
+- [Introducción al Formato Markdown](https://medium.com/@axelfernandezcurros/introducci%C3%B3n-al-formato-markdown-0486e5b47809)
 
 
 #### Projects <a name="projects"></a>
@@ -28,7 +29,7 @@ Diligent and driven Higher degree technician in Administrator of Computer System
 -   🚧  [This same webpage](#GithubWebpage)
 -   🪟  [get-winget](#GetWinget)
 -   🐍  [file_converters](#FileConverters)
--   🐍  [ScriptsEditor](#ScriptsEditor)
+-   🐍  [RuneScript](#RuneScript)
 -   🐍  [find-a-job](#FindAJob)
 -   🐍  [UE5-python](#UE5Python)
 -   🤖  [ReplikaAI](#ReplikaAI)
@@ -61,10 +62,10 @@ Diligent and driven Higher degree technician in Administrator of Computer System
           <code> git clone https://github.com/Axlfc/file_converters /home/username/Desktop/git/file_converters </code>
         <br/><br/> 
 
-    <li><a href="https://github.com/Axlfc/ScriptsEditor" target="_blank" name="ScriptsEditor">ScriptsEditor</a></li>
-        - Python script editor under the GNU General Public License v2.0.
+    <li><a href="https://github.com/Axlfc/RuneScript" target="_blank" name="RuneScript">RuneScript</a></li>
+        - RuneScript is a cutting-edge scripting platform for developers, combining advanced script execution, version control integration, and an intuitive AI assistant. Empower your coding workflow with seamless automation, powerful tools, and a streamlined development experience inspired by the mystique of runes. 
           <br/>
-          <code> git clone https://github.com/Axlfc/ScriptsEditor /home/username/Desktop/git/ScriptsEditor </code>
+          <code> git clone https://github.com/Axlfc/RuneScript /home/username/Desktop/git/RuneScript </code>
         <br/><br/> 
 
     <li><a href="https://github.com/Axlfc/find-a-job" target="_blank" name="FindAJob">find-a-job</a></li>
