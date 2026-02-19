@@ -582,7 +582,26 @@ input, textarea, button { font-family: var(--font-mono); border: none; outline: 
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: default;
+    display: inline-block;
+    margin-right: 0.5rem;
 }
+
+/* Copy button placed next to project clone command */
+.project__copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.65rem;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.project__copy:hover { background: var(--bg-alt); color: var(--accent); transform: translateY(-1px); }
+.project__copy.copied { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 /* ==================== SKILLS ==================== */
 .skills__container {
@@ -1491,6 +1510,39 @@ document.addEventListener('DOMContentLoaded', () => {
         // Remove query string while keeping anchor
         window.history.replaceState({}, document.title, window.location.pathname + '#contact');
     }
+
+    /* ===== PROJECT CLONE COPY BUTTONS ===== */
+    // Inject a copy button after each `.project__clone` and handle clipboard copy with feedback.
+    document.querySelectorAll('.project__clone').forEach(codeEl => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'project__copy';
+        btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><rect x="1" y="1" width="13" height="13" rx="2"/></svg> Copy';
+
+        codeEl.insertAdjacentElement('afterend', btn);
+
+        btn.addEventListener('click', async () => {
+            const text = codeEl.textContent.trim();
+            try {
+                await navigator.clipboard.writeText(text);
+                const prev = btn.innerHTML;
+                btn.classList.add('copied');
+                btn.innerHTML = 'Copied';
+                setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = prev; }, 1800);
+            } catch (err) {
+                // Fallback for older browsers
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy'); }
+                catch (e) { console.error('Fallback copy failed', e); }
+                document.body.removeChild(ta);
+            }
+        });
+    });
 });
     </script>
 
