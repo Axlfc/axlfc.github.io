@@ -1341,24 +1341,32 @@ input, textarea, button { font-family: var(--font-mono); border: none; outline: 
                     </div>
 
                     <div class="contact__form-wrapper">
-                        <form class="contact__form" id="contact-form">
+                        <div id="contact-success" style="display:none;padding:1rem;border-bottom:1px solid var(--border);background:var(--bg-alt);color:var(--text);">
+                            Thank you — your message was sent. I'll reply as soon as I can.
+                        </div>
+                        <form class="contact__form" id="contact-form" action="https://formsubmit.co/axlffcc@gmail.com" method="POST">
+                            <!-- Formsubmit configuration -->
+                            <input type="hidden" name="_subject" value="New message from axlfc.github.io">
+                            <input type="hidden" name="_next" value="https://axlfc.github.io/portfolio#contact?success=true">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" name="_honey" style="display:none">
                             <div class="form__row">
                                 <div class="form__field">
                                     <label class="form__label" for="name">Name</label>
-                                    <input class="form__input" type="text" id="name" placeholder="Your name" required>
+                                    <input class="form__input" type="text" id="name" name="name" placeholder="Your name" required>
                                 </div>
                                 <div class="form__field">
                                     <label class="form__label" for="email">Email</label>
-                                    <input class="form__input" type="email" id="email" placeholder="your@email.com" required>
+                                    <input class="form__input" type="email" id="email" name="email" placeholder="your@email.com" required>
                                 </div>
                             </div>
                             <div class="form__field">
                                 <label class="form__label" for="subject">Subject</label>
-                                <input class="form__input" type="text" id="subject" placeholder="Project / Collaboration / Other" required>
+                                <input class="form__input" type="text" id="subject" name="subject" placeholder="Project / Collaboration / Other" required>
                             </div>
                             <div class="form__field">
                                 <label class="form__label" for="message">Message</label>
-                                <textarea class="form__textarea" id="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+                                <textarea class="form__textarea" id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
                             </div>
                             <div class="form__submit">
                                 <button type="submit" class="btn btn--primary">
@@ -1475,15 +1483,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.skills__container').forEach(el => skillObserver.observe(el));
 
     /* ===== CONTACT FORM ===== */
-    const form = document.getElementById('contact-form');
-    form?.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        if (name) {
-            alert(`Thanks ${name}! This is a demo — wire up a real backend to receive messages.`);
-            form.reset();
-        }
-    });
+    // If redirected back from Formsubmit (via _next), show the success banner.
+    const successEl = document.getElementById('contact-success');
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+        if (successEl) { successEl.style.display = 'block'; }
+        // Remove query string while keeping anchor
+        window.history.replaceState({}, document.title, window.location.pathname + '#contact');
+    }
 });
     </script>
 
