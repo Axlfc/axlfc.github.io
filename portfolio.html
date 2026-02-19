@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Axel Fernández Curros — Videogame Developer, VR Specialist, Python Engineer & FLOSS Advocate from Salou, Spain.">
+    <meta name="author" content="Axel Fernández Curros">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://axlfc.github.io/">
+    <meta property="og:title" content="Axlfc | Videogame Dev · VR · Python · FLOSS">
+    <meta property="og:description" content="Portfolio of Axel Fernández Curros — building ethical, open-source software from Spain.">
+
+    <title>Axlfc | Dev Portfolio</title>
+
+    <!-- Fonts: Syne (display) + JetBrains Mono (body/code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+/* ==================== VARIABLES ==================== */
+:root {
+    --header-height: 4rem;
+
+    /* Light theme */
+    --bg: #f7f5f0;
+    --bg-alt: #eeebe3;
+    --surface: #ffffff;
+    --border: #ddd9ce;
+    --text: #2a2622;
+    --text-muted: #7a7066;
+    --accent: #c8410a;
+    --accent-alt: #9e3008;
+    --accent-glow: rgba(200, 65, 10, 0.12);
+    --tag-bg: #ede9e0;
+
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --radius: 2px;
+    --z-fixed: 100;
+}
+
+[data-theme="dark"] {
+    --bg: #0e0d0b;
+    --bg-alt: #161410;
+    --surface: #1a1814;
+    --border: #2e2b24;
+    --text: #e8e4da;
+    --text-muted: #7a7568;
+    --accent: #f05a1e;
+    --accent-alt: #ff7040;
+    --accent-glow: rgba(240, 90, 30, 0.15);
+    --tag-bg: #23211c;
+}
+
+/* ==================== BASE ==================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background-color var(--transition), color var(--transition);
+    overflow-x: hidden;
+}
+
+/* Subtle grain texture */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.5;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--text);
+    line-height: 1.15;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; }
+input, textarea, button { font-family: var(--font-mono); border: none; outline: none; }
+
+/* ==================== SCROLLBAR ==================== */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); }
+
+/* ==================== LAYOUT ==================== */
+.container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.grid { display: grid; gap: 1.5rem; }
+
+.section {
+    padding: 7rem 0 3rem;
+}
+
+.section__label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section__label::before {
+    content: '//';
+    opacity: 0.6;
+}
+
+.section__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background-color: var(--bg);
+    border-bottom: 1px solid transparent;
+    z-index: var(--z-fixed);
+    transition: border-color var(--transition), background-color var(--transition);
+}
+
+.header.scrolled {
+    border-bottom-color: var(--border);
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav__logo span {
+    color: var(--accent);
+}
+
+.nav__toggle, .nav__close {
+    display: none;
+    cursor: pointer;
+    color: var(--text);
+    background: none;
+    padding: 0.25rem;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav__link {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color var(--transition);
+    position: relative;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width var(--transition);
+}
+
+.nav__link:hover, .nav__link.active-link {
+    color: var(--text);
+}
+
+.nav__link:hover::after, .nav__link.active-link::after {
+    width: 100%;
+}
+
+.nav__btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-btn {
+    background: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    transition: color var(--transition);
+    padding: 0.25rem;
+}
+
+.theme-btn:hover { color: var(--accent); }
+
+/* Mobile menu */
+@media (max-width: 767px) {
+    .nav__toggle, .nav__close { display: flex; }
+
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 5rem 2rem 2rem;
+        transition: top var(--transition);
+        z-index: calc(var(--z-fixed) - 1);
+    }
+
+    .nav__menu.show-menu { top: 0; }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .nav__close {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.5rem;
+    }
+
+    .nav__link {
+        font-size: 0.85rem;
+    }
+}
+
+/* ==================== HERO ==================== */
+.home {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-height);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative background grid */
+.home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* Radial fade overlay */
+.home::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 50% 40%, transparent 40%, var(--bg) 100%);
+    pointer-events: none;
+}
+
+.home__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.home__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    opacity: 0;
+    animation: fadeSlideUp 0.7s 0.1s ease forwards;
+}
+
+.home__eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.home__title {
+    font-size: clamp(2.8rem, 9vw, 7rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.0;
+    opacity: 0;
+    animation: fadeSlideUp 0.7s 0.2s ease forwards;
+}
+
+.home__title em {
+    font-style: italic;
+    color: var(--accent);
+}
+
+.home__subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    max-width: 520px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeSlideUp 0.7s 0.35s ease forwards;
+}
+
+.home__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fadeSlideUp 0.7s 0.45s ease forwards;
+}
+
+.tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    background: var(--tag-bg);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    transition: border-color var(--transition), color var(--transition);
+}
+
+.tag:hover { border-color: var(--accent); color: var(--accent); }
+.tag--accent { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); }
+
+.home__cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeSlideUp 0.7s 0.55s ease forwards;
+}
+
+/* ==================== BUTTONS ==================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: var(--radius);
+}
+
+.btn--primary {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--accent);
+}
+
+.btn--primary:hover {
+    background: var(--accent-alt);
+    border-color: var(--accent-alt);
+    transform: translateY(-1px);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn--ghost:hover {
+    border-color: var(--text-muted);
+    transform: translateY(-1px);
+}
+
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==================== ABOUT ==================== */
+.about__container {
+    display: grid;
+    gap: 4rem;
+}
+
+.about__text {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--text-muted);
+    max-width: 680px;
+}
+
+.about__text strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.about__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0;
+    border: 1px solid var(--border);
+    margin-top: 2rem;
+}
+
+.about__stat {
+    padding: 1.5rem;
+    border-right: 1px solid var(--border);
+    position: relative;
+}
+
+.about__stat:last-child { border-right: none; }
+
+.about__stat-num {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.about__stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.about__stack {
+    margin-top: 2.5rem;
+}
+
+.about__stack-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.stack-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+/* ==================== PROJECTS ==================== */
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.project__card {
+    background: var(--surface);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: background var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.project__card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 2px;
+    height: 0;
+    background: var(--accent);
+    transition: height 0.4s ease;
+}
+
+.project__card:hover {
+    background: var(--bg-alt);
+}
+
+.project__card:hover::before {
+    height: 100%;
+}
+
+.project__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.project__icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.project__link {
+    color: var(--text-muted);
+    transition: color var(--transition);
+    display: flex;
+}
+
+.project__link:hover { color: var(--accent); }
+
+.project__name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.project__desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.project__clone {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    background: var(--tag-bg);
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.6rem;
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+}
+
+/* ==================== SKILLS ==================== */
+.skills__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.skills__group {
+    border: 1px solid var(--border);
+    padding: 1.75rem;
+    background: var(--surface);
+}
+
+.skills__group-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skills__group-title::before { content: '▸'; }
+
+.skill__item {
+    margin-bottom: 1.25rem;
+}
+
+.skill__item:last-child { margin-bottom: 0; }
+
+.skill__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+}
+
+.skill__name {
+    font-size: 0.8rem;
+    color: var(--text);
+}
+
+.skill__pct {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.skill__bar {
+    height: 2px;
+    background: var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill__fill {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    background: var(--accent);
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================== ETHICS ==================== */
+.ethics__intro {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.ethics__score {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+    background: var(--surface);
+}
+
+.ethics__score-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.ethics__score-val {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.ethics__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.ethics__card {
+    background: var(--surface);
+    padding: 1.5rem;
+    transition: background var(--transition);
+}
+
+.ethics__card:hover { background: var(--bg-alt); }
+
+.ethics__card-emoji {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.ethics__card-title {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.ethics__card-text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ==================== ARTICLES ==================== */
+.articles__list {
+    display: grid;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.article__item {
+    background: var(--surface);
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: background var(--transition);
+    text-decoration: none;
+    color: var(--text);
+}
+
+.article__item:hover { background: var(--bg-alt); }
+
+.article__num {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    min-width: 2ch;
+}
+
+.article__title {
+    font-size: 0.85rem;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.article__arrow {
+    color: var(--text-muted);
+    transition: transform var(--transition), color var(--transition);
+    flex-shrink: 0;
+}
+
+.article__item:hover .article__arrow {
+    transform: translateX(4px);
+    color: var(--accent);
+}
+
+/* ==================== CONTACT ==================== */
+.contact__container {
+    display: grid;
+    gap: 3rem;
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.contact__link:hover { color: var(--accent); }
+
+.contact__link svg { flex-shrink: 0; }
+
+.contact__form-wrapper {
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.contact__form {
+    display: grid;
+    gap: 0;
+}
+
+.form__row { display: grid; }
+
+.form__field {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+    position: relative;
+}
+
+.form__label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.form__input, .form__textarea {
+    width: 100%;
+    background: transparent;
+    color: var(--text);
+    font-size: 0.85rem;
+    padding: 0;
+    resize: none;
+}
+
+.form__input::placeholder, .form__textarea::placeholder { color: var(--text-muted); }
+
+.form__submit {
+    padding: 1rem 1.25rem;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer__left {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.footer__logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+}
+
+.footer__logo span { color: var(--accent); }
+
+.footer__socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__social {
+    color: var(--text-muted);
+    transition: color var(--transition), transform var(--transition);
+    display: flex;
+}
+
+.footer__social:hover { color: var(--accent); transform: translateY(-2px); }
+
+/* ==================== REVEAL ANIMATION ==================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+@media (min-width: 768px) {
+    .container { padding-inline: 2.5rem; }
+
+    .about__stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contact__container {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+    }
+
+    .form__row { grid-template-columns: 1fr 1fr; }
+    .form__row .form__field:first-child { border-right: 1px solid var(--border); }
+}
+
+@media (min-width: 1024px) {
+    :root { --header-height: 4.5rem; }
+    .container { padding-inline: 3rem; }
+}
+    </style>
+</head>
+<body data-theme="light">
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">axlfc<span>.</span></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#home"     class="nav__link active-link">Home</a></li>
+                    <li><a href="#about"    class="nav__link">About</a></li>
+                    <li><a href="#projects" class="nav__link">Projects</a></li>
+                    <li><a href="#skills"   class="nav__link">Skills</a></li>
+                    <li><a href="#ethics"   class="nav__link">Ethics</a></li>
+                    <li><a href="#articles" class="nav__link">Articles</a></li>
+                    <li><a href="#contact"  class="nav__link">Contact</a></li>
+                </ul>
+                <button class="nav__close" id="nav-close" aria-label="Close menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+
+            <div class="nav__btns">
+                <button class="theme-btn" id="theme-button" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="home section" id="home">
+            <div class="home__container container">
+                <div class="home__eyebrow">
+                    <span class="home__eyebrow-dot"></span>
+                    Available for projects · Salou, Spain
+                </div>
+                <h1 class="home__title">
+                    Axel<br>Fernández<br><em>Curros.</em>
+                </h1>
+                <p class="home__subtitle">
+                    Videogame Developer · VR Specialist · Python Engineer.<br>
+                    Building open-source tools, ethical AI integrations,<br>
+                    and immersive interactive experiences.
+                </p>
+                <div class="home__tags">
+                    <span class="tag tag--accent">🟢 FLOSS Advocate</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Godot / Unity / Unreal</span>
+                    <span class="tag">VR / XR</span>
+                    <span class="tag">Blender</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">3D Animation</span>
+                </div>
+                <div class="home__cta">
+                    <a href="#projects" class="btn btn--primary">
+                        View Projects
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="https://github.com/Axlfc" target="_blank" class="btn btn--ghost">
+                        GitHub
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <div class="container">
+                <p class="section__label">01 — About</p>
+                <h2 class="section__title reveal">Who I Am</h2>
+
+                <div class="about__container">
+                    <div>
+                        <p class="about__text reveal">
+                            Diligent and driven <strong>Higher Degree Technician</strong> in Videogame Development & Virtual Reality, 
+                            Administrator of Computer Systems in the Network, and <strong>3D Animator</strong> from Salou, Catalonia, Spain.
+                            I craft software that respects user freedom — with a strong preference for 
+                            <strong>open-source stacks</strong>, privacy-first design, and sustainable computing.
+                        </p>
+                        <p class="about__text reveal" style="margin-top:1rem;">
+                            From scripting Python automation tools to building immersive VR experiences in Unreal Engine 5,
+                            I bridge the gap between low-level systems administration and high-level creative development.
+                            Currently deepening expertise in <strong>ethical AI integrations</strong> using local LLMs via Ollama and Hugging Face.
+                        </p>
+
+                        <div class="about__stats reveal">
+                            <div class="about__stat">
+                                <span class="about__stat-num">14+</span>
+                                <span class="about__stat-label">Open Source<br>Projects</span>
+                            </div>
+                            <div class="about__stat">
+                                <span class="about__stat-num">84</span>
+                                <span class="about__stat-label">Tools<br>Analyzed</span>
+                            </div>
+                            <div class="about__stat">
+                                <span class="about__stat-num">3</span>
+                                <span class="about__stat-label">Degrees &<br>Certifications</span>
+                            </div>
+                            <div class="about__stat" style="border-right:none;">
+                                <span class="about__stat-num">3.1</span>
+                                <span class="about__stat-label">Ethical Stack<br>Score / 5</span>
+                            </div>
+                        </div>
+
+                        <div class="about__stack reveal">
+                            <p class="about__stack-title">// Preferred Stack</p>
+                            <div class="stack-grid">
+                                <span class="tag">Linux / Debian</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Godot Engine</span>
+                                <span class="tag">Blender</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Git</span>
+                                <span class="tag">Bash</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Nginx</span>
+                                <span class="tag">Ollama</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Proxmox</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container">
+                <p class="section__label">02 — Projects</p>
+                <h2 class="section__title reveal">Open Source Work</h2>
+
+                <div class="projects__grid reveal">
+
+                    <article class="project__card">
+                        <div class="project__header">
+                            <span class="project__icon">🐍</span>
+                            <a href="https://github.com/Axlfc/RuneScript" target="_blank" class="project__link" aria-label="View RuneScript">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                        <h3 class="project__name">RuneScript</h3>
+                        <p class="project__desc">Cutting-edge scripting platform combining advanced script execution, version control integration, and an AI assistant. Streamlined automation with rune-inspired UX.</p>
+                        <div class="stack-grid">
+                            <span class="tag">Python</span><span class="tag">AI</span><span class="tag">CLI</span>
+                        </div>
+                        <code class="project__clone">git clone https://github.com/Axlfc/RuneScript</code>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__header">
+                            <span class="project__icon">🐍</span>
+                            <a href="https://github.com/Axlfc/find-a-job" target="_blank" class="project__link" aria-label="View find-a-job">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                        <h3 class="project__name">find-a-job</h3>
+                        <p class="project__desc">Automates bulk sending of CVs to companies. Streamlines the entire job application process — reach multiple companies with a single command.</p>
+                        <div class="stack-grid">
+                            <span class="tag">Python</span><span class="tag">Automation</span>
+                        </div>
+                        <code class="project__clone">git clone https://github.com/Axlfc/find-a-job</code>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__header">
+                            <span class="project__icon">🐍</span>
+                            <a href="https://github.com/Axlfc/UE5-python" target="_blank" class="project__link" aria-label="View UE5-python">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                        <h3 class="project__name">UE5-python</h3>
+                        <p class="project__desc">Testing Python capabilities inside Unreal Engine 5, plus Blender & HoudiniFX scripts, a Twitter bot, Reddit scripts, and ChatGPT utilities.</p>
+                        <div class="stack-grid">
+                            <span class="tag">Python</span><span class="tag">Unreal Engine 5</span><span class="tag">Blender</span>
+                        </div>
+                        <code class="project__clone">git clone https://github.com/Axlfc/UE5-python</code>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__header">
+                            <span class="project__icon">🐍</span>
+                            <a href="https://github.com/Axlfc/file_converters" target="_blank" class="project__link" aria-label="View file_converters">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                        <h3 class="project__name">file_converters</h3>
+                        <p class="project__desc">Collection of Python scripts for file format conversion. Lightweight, dependency-minimal, and composable with other shell pipelines.</p>
+                        <div class="stack-grid">
+                            <span class="tag">Python</span><span class="tag">CLI</span><span class="tag">Utilities</span>
+                        </div>
+                        <code class="project__clone">git clone https://github.com/Axlfc/file_converters</code>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__header">
+                            <span class="project__icon">🎬</span>
+                            <a href="https://github.com/Axlfc/edit-movie" target="_blank" class="project__link" aria-label="View edit-movie">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                        <h3 class="project__name">edit-movie</h3>
+                        <p class="project__desc">Audio and video editing scripts using Python, FFmpeg, and MoviePy. Batch-process media files via terminal with composable operations.</p>
+                        <div class="stack-grid">
+                            <span class="tag">Python</span><span class="tag">FFmpeg</span><span class="tag">MoviePy</span>
+                        </div>
+                        <code class="project__clone">git clone https://github.com/Axlfc/edit-movie</code>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__header">
+                            <span class="project__icon">💼</span>
+                            <a href="https://github.com/Axlfc/WalletRentCalculator" target="_blank" class="project__link" aria-label="View WalletRentCalculator">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                        <h3 class="project__name">WalletRentCalculator</h3>
+                        <p class="project__desc">Track BTC / ETH wallet income using Python. Connects to on-chain data to calculate yield, fees, and net returns across multiple wallets.</p>
+                        <div class="stack-grid">
+                            <span class="tag">Python</span><span class="tag">Crypto</span><span class="tag">Web3</span>
+                        </div>
+                        <code class="project__clone">git clone https://github.com/Axlfc/WalletRentCalculator</code>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__header">
+                            <span class="project__icon">🤖</span>
+                            <a href="https://github.com/Axlfc/ReplikaAI" target="_blank" class="project__link" aria-label="View ReplikaAI">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                        <h3 class="project__name">ReplikaAI</h3>
+                        <p class="project__desc">Replika AI chatbot terminal port. Brings conversational AI to a text-based interface without needing a browser or electron wrapper.</p>
+                        <div class="stack-grid">
+                            <span class="tag">Python</span><span class="tag">AI</span><span class="tag">Terminal</span>
+                        </div>
+                        <code class="project__clone">git clone https://github.com/Axlfc/ReplikaAI</code>
+                    </article>
+
+                    <article class="project__card">
+                        <div class="project__header">
+                            <span class="project__icon">🪟</span>
+                            <a href="https://github.com/Axlfc/get-winget" target="_blank" class="project__link" aria-label="View get-winget">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                        </div>
+                        <h3 class="project__name">get-winget</h3>
+                        <p class="project__desc">Windows package manager (winget) installation via PowerShell or CMD scripts. One-line bootstrap for fresh Windows environments.</p>
+                        <div class="stack-grid">
+                            <span class="tag">PowerShell</span><span class="tag">Windows</span><span class="tag">DevOps</span>
+                        </div>
+                        <code class="project__clone">git clone https://github.com/Axlfc/get-winget</code>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <p class="section__label">03 — Skills</p>
+                <h2 class="section__title reveal">Technical Expertise</h2>
+
+                <div class="skills__container reveal">
+                    <div class="skills__group">
+                        <p class="skills__group-title">Game Development & VR</p>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">C# / Unity</span><span class="skill__pct">90%</span></div><div class="skill__bar"><span class="skill__fill" data-width="90"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">GDScript / Godot</span><span class="skill__pct">85%</span></div><div class="skill__bar"><span class="skill__fill" data-width="85"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">C++ / Unreal Engine 5</span><span class="skill__pct">75%</span></div><div class="skill__bar"><span class="skill__fill" data-width="75"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">VR / XR Development</span><span class="skill__pct">80%</span></div><div class="skill__bar"><span class="skill__fill" data-width="80"></span></div></div>
+                    </div>
+
+                    <div class="skills__group">
+                        <p class="skills__group-title">3D & Creative Tools</p>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">Blender (3D/Assets)</span><span class="skill__pct">90%</span></div><div class="skill__bar"><span class="skill__fill" data-width="90"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">HoudiniFX</span><span class="skill__pct">60%</span></div><div class="skill__bar"><span class="skill__fill" data-width="60"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">FFmpeg / MoviePy</span><span class="skill__pct">80%</span></div><div class="skill__bar"><span class="skill__fill" data-width="80"></span></div></div>
+                    </div>
+
+                    <div class="skills__group">
+                        <p class="skills__group-title">Python & Backend</p>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">Python</span><span class="skill__pct">95%</span></div><div class="skill__bar"><span class="skill__fill" data-width="95"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">FastAPI / Django</span><span class="skill__pct">75%</span></div><div class="skill__bar"><span class="skill__fill" data-width="75"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">PostgreSQL / Firebase</span><span class="skill__pct">70%</span></div><div class="skill__bar"><span class="skill__fill" data-width="70"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">Bash / Linux Sysadmin</span><span class="skill__pct">85%</span></div><div class="skill__bar"><span class="skill__fill" data-width="85"></span></div></div>
+                    </div>
+
+                    <div class="skills__group">
+                        <p class="skills__group-title">AI & Infra</p>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">Ollama / Local LLMs</span><span class="skill__pct">80%</span></div><div class="skill__bar"><span class="skill__fill" data-width="80"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">Hugging Face / PyTorch</span><span class="skill__pct">65%</span></div><div class="skill__bar"><span class="skill__fill" data-width="65"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">Docker / Nginx / Proxmox</span><span class="skill__pct">75%</span></div><div class="skill__bar"><span class="skill__fill" data-width="75"></span></div></div>
+                        <div class="skill__item"><div class="skill__meta"><span class="skill__name">Network Administration</span><span class="skill__pct">80%</span></div><div class="skill__bar"><span class="skill__fill" data-width="80"></span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETHICS -->
+        <section class="section" id="ethics">
+            <div class="container">
+                <p class="section__label">04 — Ethics</p>
+                <h2 class="section__title reveal">Ethical Tech Stack</h2>
+
+                <p class="ethics__intro reveal">
+                    I've analyzed 84 software tools across my stack. Every tool is rated on a 5-star ethical scale
+                    covering privacy, open governance, and environmental impact.
+                </p>
+
+                <div class="ethics__score reveal">
+                    <div>
+                        <span class="ethics__score-label">Corporate Ethics Level</span>
+                        <div style="display:flex;align-items:baseline;gap:0.5rem;">
+                            <span class="ethics__score-val">3.1</span>
+                            <span style="font-size:0.75rem;color:var(--text-muted)">/ 5 · ⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    <div style="border-left:1px solid var(--border);padding-left:1.5rem;font-size:0.72rem;color:var(--text-muted);line-height:2;">
+                        <div>🟢 Free/Ethical (⭐⭐⭐⭐⭐) — 35 tools · 41.7%</div>
+                        <div>🟡 Proprietary, good practices (⭐⭐⭐) — 28 tools · 33.3%</div>
+                        <div>🟠 Corporate mixed (⭐⭐) — 15 tools · 17.9%</div>
+                        <div>🔴 Problematic (⭐) — 6 tools · 7.1%</div>
+                    </div>
+                </div>
+
+                <div class="ethics__grid reveal">
+                    <div class="ethics__card">
+                        <div class="ethics__card-emoji">🌍</div>
+                        <h3 class="ethics__card-title">Sustainability</h3>
+                        <p class="ethics__card-text">Efficient code, responsible infrastructure, low-power computing. Raspberry Pi, ESP32, and Proxmox over cloud waste.</p>
+                    </div>
+                    <div class="ethics__card">
+                        <div class="ethics__card-emoji">🤝</div>
+                        <h3 class="ethics__card-title">Inclusivity</h3>
+                        <p class="ethics__card-text">Universal accessibility, open-source by default. Building software that works for everyone, not just the privileged few.</p>
+                    </div>
+                    <div class="ethics__card">
+                        <div class="ethics__card-emoji">🔒</div>
+                        <h3 class="ethics__card-title">Privacy</h3>
+                        <p class="ethics__card-text">Zero tracking when possible. Privacy by design, full transparency. Signal · Matrix · Pi-hole · Nextcloud over surveillance tech.</p>
+                    </div>
+                    <div class="ethics__card">
+                        <div class="ethics__card-emoji">🧠</div>
+                        <h3 class="ethics__card-title">Ethical AI</h3>
+                        <p class="ethics__card-text">Local models over cloud dependencies. Ollama, Hugging Face, Mistral AI — AI that runs on your hardware and respects your data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTICLES -->
+        <section class="section" id="articles">
+            <div class="container">
+                <p class="section__label">05 — Writing</p>
+                <h2 class="section__title reveal">Articles</h2>
+
+                <div class="articles__list reveal">
+                    <a href="https://medium.com/@axelfernandezcurros/tu-gu%C3%ADa-completa-de-iniciado-con-git-b6b475bb6991" target="_blank" class="article__item">
+                        <span class="article__num">01</span>
+                        <span class="article__title">Tu Guía Completa de Iniciado con Git</span>
+                        <svg class="article__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="https://medium.com/@axelfernandezcurros/iniciando-con-python-tu-primer-programa-hola-mundo-d4bef62103fc" target="_blank" class="article__item">
+                        <span class="article__num">02</span>
+                        <span class="article__title">Iniciando con Python: Tu Primer Programa 'Hola, Mundo!'</span>
+                        <svg class="article__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="https://medium.com/@axelfernandezcurros/programaci%C3%B3n-en-python-para-principiantes-una-gu%C3%ADa-integral-7e0b87016f84" target="_blank" class="article__item">
+                        <span class="article__num">03</span>
+                        <span class="article__title">Programación en Python para Principiantes: Una Guía Integral</span>
+                        <svg class="article__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="https://medium.com/@axelfernandezcurros/gu%C3%ADa-completa-para-crear-y-desarrollar-tu-p%C3%A1gina-web-con-github-pages-html-css-javascript-y-git-3cc06c104be7" target="_blank" class="article__item">
+                        <span class="article__num">04</span>
+                        <span class="article__title">Guía Completa para Crear tu Página Web con GitHub Pages, HTML, CSS, JavaScript y Git</span>
+                        <svg class="article__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="https://medium.com/@axelfernandezcurros/introducci%C3%B3n-al-formato-markdown-0486e5b47809" target="_blank" class="article__item">
+                        <span class="article__num">05</span>
+                        <span class="article__title">Introducción al Formato Markdown</span>
+                        <svg class="article__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="https://medium.com/@axelfernandezcurros/runescript-redefiniendo-el-desarrollo-de-scripts-con-ia-y-web3-4a4577129f03" target="_blank" class="article__item">
+                        <span class="article__num">06</span>
+                        <span class="article__title">RuneScript: Redefiniendo el Desarrollo de Scripts con IA y Web3</span>
+                        <svg class="article__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <p class="section__label">06 — Contact</p>
+                <h2 class="section__title reveal">Get In Touch</h2>
+
+                <div class="contact__container reveal">
+                    <div class="contact__info">
+                        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1.5rem;line-height:1.8;">
+                            Available for freelance projects, open-source collaborations,<br>
+                            and full-time positions in game dev, VR, or Python engineering.
+                        </p>
+
+                        <a href="https://www.linkedin.com/in/axelcurros/" target="_blank" class="contact__link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            linkedin.com/in/axelcurros
+                        </a>
+                        <a href="https://github.com/Axlfc" target="_blank" class="contact__link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            github.com/Axlfc
+                        </a>
+                        <a href="https://dev.to/axlfc" target="_blank" class="contact__link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h2l2-4 2 8 2-4h2"/></svg>
+                            dev.to/axlfc
+                        </a>
+                        <a href="https://mastodon.social/@axlfc" target="_blank" class="contact__link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2H3v16l4-4h14z"/></svg>
+                            mastodon.social/@axlfc
+                        </a>
+
+                        <div style="margin-top:1.5rem;padding:1rem;border:1px solid var(--border);font-size:0.7rem;color:var(--text-muted);line-height:1.9;">
+                            <strong style="color:var(--text);">⚠️ Not on:</strong><br>
+                            Facebook · Instagram · WhatsApp · TikTok · Twitter/X
+                        </div>
+                    </div>
+
+                    <div class="contact__form-wrapper">
+                        <form class="contact__form" id="contact-form">
+                            <div class="form__row">
+                                <div class="form__field">
+                                    <label class="form__label" for="name">Name</label>
+                                    <input class="form__input" type="text" id="name" placeholder="Your name" required>
+                                </div>
+                                <div class="form__field">
+                                    <label class="form__label" for="email">Email</label>
+                                    <input class="form__input" type="email" id="email" placeholder="your@email.com" required>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <label class="form__label" for="subject">Subject</label>
+                                <input class="form__input" type="text" id="subject" placeholder="Project / Collaboration / Other" required>
+                            </div>
+                            <div class="form__field">
+                                <label class="form__label" for="message">Message</label>
+                                <textarea class="form__textarea" id="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <div class="form__submit">
+                                <button type="submit" class="btn btn--primary">
+                                    Send Message
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__left">
+                    <div class="footer__logo">axlfc<span>.</span></div>
+                    <div>© 2025 Axel Fernández Curros · Salou, Spain · FLOSS First 🟢</div>
+                </div>
+                <div class="footer__socials">
+                    <a href="https://github.com/Axlfc" target="_blank" class="footer__social" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/axelcurros/" target="_blank" class="footer__social" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://mastodon.social/@axlfc" target="_blank" class="footer__social" aria-label="Mastodon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2H3v16l4-4h14z"/></svg>
+                    </a>
+                    <a href="https://dev.to/axlfc" target="_blank" class="footer__social" aria-label="Dev.to">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h2l2-4 2 8 2-4h2"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+
+    /* ===== MENU ===== */
+    const navMenu   = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose  = document.getElementById('nav-close');
+
+    navToggle?.addEventListener('click', () => navMenu.classList.add('show-menu'));
+    navClose?.addEventListener('click',  () => navMenu.classList.remove('show-menu'));
+
+    document.querySelectorAll('.nav__link').forEach(link =>
+        link.addEventListener('click', () => navMenu.classList.remove('show-menu'))
+    );
+
+    /* ===== THEME ===== */
+    const themeBtn = document.getElementById('theme-button');
+    const body = document.body;
+    const saved = localStorage.getItem('axlfc-theme');
+    if (saved) body.setAttribute('data-theme', saved);
+
+    themeBtn?.addEventListener('click', () => {
+        const next = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        body.setAttribute('data-theme', next);
+        localStorage.setItem('axlfc-theme', next);
+    });
+
+    /* ===== SCROLL HEADER ===== */
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY >= 60);
+    }, { passive: true });
+
+    /* ===== ACTIVE NAV LINK ===== */
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset;
+        sections.forEach(sec => {
+            const top = sec.offsetTop - 80;
+            const height = sec.offsetHeight;
+            const id = sec.getAttribute('id');
+            const link = document.querySelector(`.nav__link[href="#${id}"]`);
+            if (link) link.classList.toggle('active-link', scrollY >= top && scrollY < top + height);
+        });
+    }, { passive: true });
+
+    /* ===== REVEAL ON SCROLL ===== */
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ===== SKILL BARS ===== */
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.skill__fill').forEach(fill => {
+                    const w = fill.getAttribute('data-width');
+                    setTimeout(() => { fill.style.width = w + '%'; }, 150);
+                });
+                skillObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.skills__container').forEach(el => skillObserver.observe(el));
+
+    /* ===== CONTACT FORM ===== */
+    const form = document.getElementById('contact-form');
+    form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        if (name) {
+            alert(`Thanks ${name}! This is a demo — wire up a real backend to receive messages.`);
+            form.reset();
+        }
+    });
+});
+    </script>
+
+</body>
+</html>
