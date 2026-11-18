@@ -16,6 +16,8 @@ El objetivo editorial es mostrar **trabajos verificables** en desarrollo web, so
 | `privacidad.html` | Información preliminar sobre datos del formulario |
 | `404.html` | Página de error |
 | `assets/axlfc-mark.svg` | Favicon |
+| `assets/axlfc-social.png` | Imagen social PNG 1200×630, generada a partir de la identidad editorial |
+| `scripts/generate_social_card.py` | Generador reproducible de esa tarjeta social (requiere Pillow) |
 | `tests/` | Regresiones estáticas y de navegador |
 | `.github/workflows/portfolio-ci.yml` | Pruebas de integración en GitHub Actions |
 | `docs/portfolio-v2/` | Criterios de liberación y decisiones del rediseño |
@@ -39,6 +41,12 @@ python tests/browser_smoke.py
 ```
 
 Los checks del PR prueban contenido original, enlaces de sección y proyectos históricos, sintaxis JavaScript, build Jekyll y comportamiento responsive. El script de navegador **no envía datos al servicio de contacto**.
+
+Para recrear la imagen social tras modificar la identidad gráfica:
+```sh
+python -m pip install pillow==11.3.0
+python scripts/generate_social_card.py
+```
 
 ## Formulario
 

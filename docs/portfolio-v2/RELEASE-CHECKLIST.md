@@ -19,7 +19,7 @@ Source: V2.4 editorial prototype, migrated to explicit production assets.
 - [ ] Confirm exact names and awards of academic qualifications before publishing them
 - [ ] Complete keyboard/screen reader accessibility audit and independent Lighthouse metrics (basic interaction/contrast checks automated)
 - [ ] Real project screenshots to replace conceptual featured artwork
-- [ ] Add validated 1200x630 PNG Open Graph social asset and reinstate metadata (not yet deployed)
+- [x] PNG social 1200x630 añadido al repositorio y metadatos OG/Twitter activados; test valida cabecera y dimensiones
 - [ ] Visual review of preview deployment; no automatic merge
 - [ ] Decide how to keep or revise the original English-language presentation
 
