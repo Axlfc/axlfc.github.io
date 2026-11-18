@@ -1,147 +1,71 @@
-# axlfc.github.io
+# Axlfc — Portafolio personal
 
-This repository contains the source code for my personal portfolio webpage hosted on GitHub Pages.
+Código fuente de [axlfc.github.io](https://axlfc.github.io), el portafolio de Axel Fernández Curros.
 
-[![Visit My Code Portfolio](https://img.shields.io/badge/Visit-Code%20Portfolio-blue?style=for-the-badge&logo=github)](https://axlfc.github.io)
+El objetivo editorial es mostrar **trabajos verificables** en desarrollo web, software, automatización, infraestructura y tecnología creativa, con una navegación limpia y accesible. Los proyectos de investigación se diferencian de los productos ejecutables.
 
-## Overview
+> **Origen del rediseño:** [PR #2](https://github.com/Axlfc/axlfc.github.io/pull/2). Publicación sujeta a CI y verificaciones de producción.
 
-The webpage is built using Bootstrap 4 for GitHub Pages and serves as a showcase for my projects, skills, and accomplishments.
+## Estructura de la V2
 
-## GitHub Pages Overview
+| Archivo | Función |
+| --- | --- |
+| `index.html` | Contenido y estructura semántica del portafolio |
+| `styles.css` | Layout editorial, responsive, colores y foco visible |
+| `script.js` | Preferencia de tema, navegación, enlaces históricos y botones de copia |
+| `privacidad.html` | Información de privacidad y proveedor externo de contacto |
+| `404.html` | Página de error |
+| `assets/axlfc-mark.svg` | Favicon |
+| `assets/axlfc-social.png` | Imagen social PNG 1200×630, generada a partir de la identidad editorial |
+| `scripts/generate_social_card.py` | Generador reproducible de esa tarjeta social (requiere Pillow) |
+| `tests/` | Regresiones estáticas y de navegador |
+| `.github/workflows/portfolio-ci.yml` | Pruebas de integración en GitHub Actions |
+| `docs/portfolio-v2/` | Criterios de liberación y decisiones del rediseño |
 
-[GitHub Pages](https://pages.github.com/) is a static site hosting service provided by GitHub, allowing users to create and publish webpages directly from their GitHub repositories. 
-GitHub Pages supports Jekyll, a static site generator, and provides flexibility with HTML, CSS, and JavaScript for building your site.
+No se necesita React, un backend para mostrar la web ni dependencias JavaScript en producción. GitHub Pages construye el repositorio con Jekyll; los estilos y scripts del portafolio son propios.
 
-## Creating Your Own GitHub Pages
+## Desarrollo y validación
 
-1. **Create a Repository:**
-   - Go to your GitHub profile.
-   - Click on the "Repositories" tab.
-   - Create a new repository with the name `yourusername.github.io`, replacing "yourusername" with your GitHub username.
-
-2. **Clone the Repository:**
-   - Open your terminal or Git Bash.
-   - Run the following command, replacing "username" with your GitHub username:
-     ```bash
-     git clone https://github.com/username/username.github.io.git
-     ```
-
-   **Explanation:**
-   - Use `git clone` to clone a repository from a URL.
-   - The URL is the address of your GitHub repository, creating a copy on your local machine in the current directory.
-
-3. **Add Your Content:**
-   - Customize your webpage by adding HTML, CSS, and other assets.
-
-   **Explanation:**
-   - Create or modify files in the cloned repository based on your webpage's content in ```index.md``` and other files.
-
-4. **Commit Your Changes:**
-   - Stage your changes and commit them to your local repository:
-     ```bash
-     git add .
-     git commit -am "Initial commit with project structure".
-     ```
-
-   **Explanation:**
-   - `git add .` stages all changes for the next commit.
-   - `git commit -am "Initial commit"` creates a commit with a message describing the changes.
-
-5. **Push Your Changes:**
-
-After making and committing your changes locally, the next step is to push those changes to your GitHub repository. 
-This process updates the remote repository on GitHub with your latest changes.
-
-### Command Explanation:
-
-Use the following command to push your committed changes:
-
-```bash
-  git push origin main
+```sh
+python -m unittest discover -s tests -v
+node --check script.js
+bundle exec jekyll build --trace
 ```
 
-This command comprises two main components:
+Para ejecutar las pruebas de navegador:
 
-- git push:
-        The git push command is used to upload local changes to a remote repository, in this case, GitHub.
-- origin main:
-        The origin refers to the remote repository's alias. 
-        When you cloned your repository, Git automatically set up an alias called origin for the URL of the repository on GitHub.
-        ```main``` represents the branch you are pushing to. 
-        In Git, the term "main" typically refers to the main branch of your repository, also known as the default branch.
+```sh
+python -m pip install playwright==1.57.0
+python -m playwright install chromium
+python tests/browser_smoke.py
+```
 
-What Happens When You Push:
+Los checks del PR prueban contenido original, enlaces de sección y proyectos históricos, sintaxis JavaScript, build Jekyll y comportamiento responsive. El script de navegador **no envía datos al servicio de contacto**.
 
-- Staging Changes:
-        Before pushing, ensure you have staged your changes using ```git add .``` and committed them using git commit -m "Your commit message". 
-        The '.' in the command 'git add .' represents all files in the current directory but we can specify them individually.
-        This prepares your changes for upload.
+Para recrear la imagen social tras modificar la identidad gráfica:
+```sh
+python -m pip install pillow==11.3.0
+python scripts/generate_social_card.py
+```
 
-- Connecting to GitHub:
-        Running git push establishes a connection to the GitHub repository using the origin alias.
+## Formulario
 
-- Uploading Changes:
-        The changes you committed locally are uploaded to the remote repository on GitHub.
+Se mantiene el proveedor FormSubmit y el destino ya configurado en la web anterior. Incluye campos obligatorios, honeypot y un retorno corregido. Las pruebas no envían mensajes reales. La recepción en la bandeja de correo y el tratamiento operativo del servicio externo deben verificarse por el titular.
 
-- Updating the Repository:
-        The main branch on GitHub is updated with your latest changes, making your updated code accessible to others who may collaborate on the project.
+## Publicación y decisiones pendientes
 
-You can find the name of your current branch (e.g., ```git branch```).
+La [checklist de mantenimiento y publicación](docs/portfolio-v2/RELEASE-CHECKLIST.md) documenta qué se verificó automáticamente y qué requiere revisión humana. Para futuras versiones, revisa CI antes de fusionar.
 
-- Note:
+Los recursos visuales de proyectos etiquetados como conceptuales **no son capturas de producto**. No publicar contenido privado de terceros ni atribuir a una persona contribuciones sin verificación.
 
-    If you're working on a branch other than main, replace main with the name of your current branch.
+**Licencias:** no presupongas una licencia de reutilización para la totalidad de este repositorio: comprueba las condiciones de cada recurso y la existencia de una licencia explícita antes de redistribuirlo.
 
-    Always ensure that your local branch is up-to-date with the remote branch before pushing changes to avoid conflicts.
+## Documentación anterior
 
-    You can ensure that GitHub Pages is enabled for the repository and that the source branch (e.g., main or master) is correctly configured.
+El [README histórico](docs/portfolio-v2/README-LEGACY.md) se conserva por trazabilidad; menciona Bootstrap y una rama `main` que no corresponden a la arquitectura actual.
 
-Now, with your changes successfully pushed, others can view and collaborate on the updated codebase on GitHub.
+## Conservación íntegra del portafolio anterior
 
-6. **Visit Your Webpage:**
-   - After a few minutes, your webpage will be live at `https://yourusername.github.io`.
+La versión original de `master`, tal como existía antes de la PR #2, se ha conservado **sin modificaciones** en [docs/portfolio-v2/LEGACY-INDEX.html](docs/portfolio-v2/LEGACY-INDEX.html). También se ofrece una [versión navegable del archivo en inglés](https://axlfc.github.io/legacy-english.html), identificada como histórica y excluida de indexación. El README previo permanece en `docs/portfolio-v2/README-LEGACY.md` y se conserva todo el historial Git.
 
-## Testing Changes Locally
-
-Before pushing changes to GitHub, you can test your webpage locally using Jekyll. Follow these steps:
-
-1. **Install Ruby and Prerequisites:**
-   - Run the following commands to install Ruby and prerequisites:
-     ```bash
-     sudo apt-get install ruby-full build-essential zlib1g-dev
-     echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-     echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-     echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-     source ~/.bashrc
-     gem install jekyll bundler
-     ```
-
-2. **Run Jekyll:**
-   - Navigate to your local repository in the terminal.
-   - Run the following command to start the Jekyll server:
-     ```bash
-     bundle exec jekyll serve
-     ```
-
-   **Note:**
-   - If you encounter an error with Ruby 3.0 or later, try running `bundle add webrick` and then `bundle exec jekyll serve`.
-
-3. **Preview Your Site:**
-   - Open your web browser and go to [http://localhost:4000](http://localhost:4000) to preview your site.
-
-## Usage
-
-Simply open the `index.html` file in a web browser to view the webpage.
-
-Feel free to explore the code, and if you have any suggestions or improvements, open an issue or submit a pull request!
-
-Happy coding!
-
-## Contribution
-
-[See the contribution guide.](./CONTRIBUTING.md)
-
-## Theme from Bootswatch
-
-The theme used in this project is from [Bootswatch](https://bootswatch.com/), a collection of free themes for Bootstrap. You can explore different themes on the Bootswatch website to customize the look and feel of your Bootstrap-based project.
+Las menciones del archivo a métricas, títulos o productos son declaraciones **históricas del portafolio anterior**, no validaciones nuevas.

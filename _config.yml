@@ -13,17 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Axlfc's Projects
-author: Axel Fernandez Curros
+title: "Axlfc — Desarrollo web, software y sistemas"
+author: "Axel Fernández Curros"
 email: "axelfernandezcurros@gmail.com"
-description: >- # this means to ignore newlines until "baseurl:"
-  Coding since 2019
-#baseurl: "" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: >-
+  Desarrollo web, software, sistemas y tecnología creativa. Portafolio de Axel Fernández Curros.
+baseurl: ""
+url: "https://axlfc.github.io"
 #twitter_username: jekyllrb
 github_username:  axlfc
 
-repository: "nicolas-van/bootstrap-4-github-pages"
+repository: "Axlfc/axlfc.github.io"
 
 # Build settings
 plugins:
@@ -40,6 +40,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - vendor
+  - .bundle
+  - _site
+  - tests
+  - docs/portfolio-v2
   - update_boostrap.sh
 
 theme: jekyll-theme-minimal
