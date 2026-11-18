@@ -1,5 +1,6 @@
 """Regresiones editoriales y de interfaz del portafolio; no hacen peticiones externas."""
 import re
+import struct
 import unittest
 from pathlib import Path
 
@@ -60,7 +61,11 @@ class PortfolioSmokeTests(unittest.TestCase):
         self.assertNotIn("Esta es una previsualización local", HTML)
         self.assertNotRegex(HTML, r"(?i)diputaci[oó]n de tarragona|gabinet[e]? de presidencia")
         self.assertIn("privacidad.html", HTML)
-        self.assertNotIn("assets/axlfc-social.png", HTML)
+        self.assertIn("assets/axlfc-social.png", HTML)
+        self.assertIn('content="summary_large_image"', HTML)
+        graphic = (ROOT / "assets/axlfc-social.png").read_bytes()
+        self.assertTrue(graphic.startswith(b"\\x89PNG\\r\\n\\x1a\\n"))
+        self.assertEqual(struct.unpack(">II", graphic[16:24]), (1200, 630))
 
 
 if __name__ == "__main__":
