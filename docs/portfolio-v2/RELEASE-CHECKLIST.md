@@ -37,3 +37,12 @@ No employment affiliation with the previously excluded institution may be publis
 - [ ] The selected project visuals remain explicitly labeled *conceptual*. Real screenshots must only come from real deployed/working code.
 - [ ] Live FormSubmit delivery and anti-spam behavior cannot be established from mock submissions; provider recommends reCAPTCHA but the existing site intentionally has it disabled, so review the privacy/spam tradeoff before enabling it.
 - [ ] A clear licensing decision is required before claiming the portfolio code itself is under an open-source license.
+
+## Refinamientos de accesibilidad y metadatos (18/11/2026)
+- [x] Metadatos Twitter Card sin duplicación; Open Graph y JSON-LD conservados.
+- [x] Destino de enlace «Saltar al contenido» enfocable por teclado sin añadirlo al orden de tabulación.
+- [x] Formulario vinculado mediante `aria-describedby` a su aviso de privacidad.
+- [x] Tamaño táctil mínimo de 44 px en controles de navegación y copia.
+- [x] Tema de color coherente con controles nativos y soporte de colores forzados.
+- [x] Tests estáticos y de navegador para las regresiones anteriores.
+- [ ] Auditoría manual con lector de pantalla y dispositivos físicos: los tests no sustituyen WCAG completo.

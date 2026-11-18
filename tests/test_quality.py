@@ -78,6 +78,29 @@ class PortfolioQualityTests(unittest.TestCase):
                 self.assertIn('noreferrer', rel)
                 self.assertEqual(urlsplit(attrs.get('href','')).scheme, 'https')
 
+    def test_social_metadata_is_not_duplicated(self):
+        parser = Tags()
+        parser.feed(HTML)
+        cards = [attrs for tag, attrs in parser.tags
+                 if tag == 'meta' and attrs.get('name') == 'twitter:card']
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]['content'], 'summary_large_image')
+
+    def test_skip_target_and_contact_disclosure(self):
+        parser = Tags()
+        parser.feed(HTML)
+        main = [attrs for tag, attrs in parser.tags if tag == 'main']
+        self.assertEqual(len(main), 1)
+        self.assertEqual(main[0].get('id'), 'contenido')
+        self.assertEqual(main[0].get('tabindex'), '-1')
+        form = [attrs for tag, attrs in parser.tags if tag == 'form']
+        self.assertEqual(len(form), 1)
+        description = form[0].get('aria-describedby')
+        self.assertTrue(description)
+        self.assertTrue(any(attrs.get('id') == description for _, attrs in parser.tags))
+        self.assertIn('color-scheme:dark', CSS)
+        self.assertIn('forced-colors:active', CSS)
+
     def test_form_does_not_submit_during_ci(self):
         parser = Tags()
         parser.feed(HTML)

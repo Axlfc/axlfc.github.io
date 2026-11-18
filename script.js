@@ -9,11 +9,13 @@
     root.dataset.theme = theme;
     const statusBar = document.querySelector('meta[name="theme-color"]');
     if (statusBar) statusBar.setAttribute('content', theme === 'dark' ? '#142025' : '#faf9f6');
-    button.setAttribute('aria-pressed', String(theme === 'dark'));
-    button.setAttribute('aria-label', theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro');
+    if (button) {
+      button.setAttribute('aria-pressed', String(theme === 'dark'));
+      button.setAttribute('aria-label', theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro');
+    }
   };
   apply(saved === 'dark' || saved === 'light' ? saved : preferred);
-  button.addEventListener('click', () => {
+  button?.addEventListener('click', () => {
     const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
     apply(next);
     try { localStorage.setItem('axlfc-theme', next); } catch (_) {}

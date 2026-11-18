@@ -29,6 +29,8 @@ with sync_playwright() as playwright:
             assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), f"overflow at {width}px"
             assert page.get_by_role("main").count() == 1
             assert page.get_by_role("heading", level=1).count() == 1
+            assert page.locator('main#contenido[tabindex="-1"]').count() == 1
+            assert page.locator('#contact-form[aria-describedby="contact-privacy-note"]').count() == 1
             assert page.locator(".writing-list a").count() == 6
             assert page.locator(".contact-form input[required]").count() == 3
             assert page.locator(".contact-form textarea[required]").count() == 1
@@ -38,6 +40,8 @@ with sync_playwright() as playwright:
             theme.click()
             assert page.locator("html").get_attribute("data-theme") != before
             theme.click()
+            assert theme.get_attribute("aria-pressed") == str(before == "dark").lower()
+            assert theme.get_attribute("aria-label") in ("Activar modo oscuro", "Activar modo claro")
             page.locator("#archivo summary").click()
             assert page.locator("#archivo").evaluate("d => d.open")
             assert page.locator(".archive-list > a").count() == 7
