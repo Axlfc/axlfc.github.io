@@ -64,7 +64,7 @@ class PortfolioSmokeTests(unittest.TestCase):
         self.assertIn("assets/axlfc-social.png", HTML)
         self.assertIn('content="summary_large_image"', HTML)
         graphic = (ROOT / "assets/axlfc-social.png").read_bytes()
-        self.assertTrue(graphic.startswith(b"\\x89PNG\\r\\n\\x1a\\n"))
+        self.assertTrue(graphic.startswith(bytes([137, 80, 78, 71, 13, 10, 26, 10])))
         self.assertEqual(struct.unpack(">II", graphic[16:24]), (1200, 630))
 
 
