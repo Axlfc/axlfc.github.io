@@ -33,7 +33,7 @@ with sync_playwright() as pw:
     try:
         for name, html in pages.items():
             for theme in ("light", "dark"):
-                page = browser.new_page(viewport={"width": 390 if name == "home" else 1024, "height": 844})
+                page = browser.new_page(viewport={"width": 390 if name == "home" else 1024, "height": 844}, reduced_motion="reduce")
                 page.set_content(html, wait_until="domcontentloaded")
                 page.evaluate("(theme) => { document.documentElement.dataset.theme = theme; }", theme)
                 page.add_script_tag(path=str(AXE))
