@@ -21,6 +21,7 @@ with sync_playwright() as playwright:
             page.on("pageerror", lambda error: errors.append(str(error)))
             page.set_content(html, wait_until="domcontentloaded")
             page.locator("h1").wait_for()
+            page.screenshot(path=str(artifacts / f"hero-{width}.png"), timeout=15000)
             assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), f"overflow at {width}px"
             assert page.get_by_role("main").count() == 1
             assert page.get_by_role("heading", level=1).count() == 1
@@ -54,8 +55,6 @@ with sync_playwright() as playwright:
                 assert not nav.evaluate("d => d.open")
             else:
                 assert not nav.is_visible()
-            page.evaluate('document.documentElement.style.scrollBehavior="auto";window.scrollTo(0,0)')
-            page.screenshot(path=str(artifacts / f"hero-{width}.png"), timeout=15000)
             if width in (390, 1440):
                 page.locator("#contacto").scroll_into_view_if_needed()
                 page.screenshot(path=str(artifacts / f"contact-{width}.png"), timeout=15000)
