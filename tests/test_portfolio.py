@@ -17,7 +17,7 @@ class PortfolioSmokeTests(unittest.TestCase):
 
     def test_document(self):
         self.assertIn('<html lang="es"', HTML)
-        self.assertEqual(len(re.findall(r"<h1\\b", HTML)), 1)
+        self.assertEqual(len(re.findall(r"<h1\b", HTML)), 1)
         self.assertIn('href="/styles.css"', HTML)
         self.assertIn('src="/script.js"', HTML)
 
@@ -27,7 +27,7 @@ class PortfolioSmokeTests(unittest.TestCase):
                 self.assertIn(f'id="{anchor}"', HTML)
 
     def test_contact_form(self):
-        self.assertRegex(HTML, r'action="https://formsubmit\\.co/[a-zA-Z0-9]+"')
+        self.assertRegex(HTML, r'action="https://formsubmit\.co/[a-zA-Z0-9]+"')
         for name in ("name", "email", "subject", "message", "_next", "_honey"):
             with self.subTest(name=name):
                 self.assertIn(f'name="{name}"', HTML)
