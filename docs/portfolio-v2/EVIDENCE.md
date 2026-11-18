@@ -30,3 +30,9 @@
 - Imagen social del portafolio (puede generarse localmente mediante `scripts/generate_social_card.py`).
 
 Una imagen conceptual puede ser válida para la composición, pero nunca debe suplir una prueba visual de software real.
+
+## Prueba visual de desarrollo web
+
+- Una captura real de prueba de interfaz se conserva en `assets/hypenosys-ui-test.png`, tomada **sin modificar** de [Hypenosys Web / `runners_ui_test.png`](https://github.com/hypenosys/hypenosys.github.io/blob/master/runners_ui_test.png). Tamaño original: 1280×720.
+- La captura muestra un estado de desarrollo de la plataforma colaborativa; **no demuestra un despliegue actual ni autoría individual exclusiva**.
+- Se presenta en un desplegable voluntario para mantener aire visual y dar contexto documental a quien desee profundizar.

@@ -47,6 +47,15 @@ h2{font:800 clamp(36px,4vw,54px)/1.13 var(--display);letter-spacing:-.066em;marg
 .compact-number{color:var(--accent);font:700 12px var(--body)}
 .compact-project h3{font:800 21px/1.3 var(--display);letter-spacing:-.045em;margin:0 0 6px}.compact-project p{color:var(--muted);font-size:14px;line-height:1.55;margin:0;max-width:620px}
 .compact-domain{color:var(--subtle);font-size:13px}.compact-project>a{font:600 23px var(--display);text-align:right}.compact-project>a:hover{color:var(--accent)}
+.project-evidence{border-bottom:1px solid var(--line);margin:0 0 10px}
+.project-evidence>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;padding:24px 0;list-style:none;color:var(--ink);font-size:14px;font-weight:600}
+.project-evidence>summary::-webkit-details-marker{display:none}
+.project-evidence>summary span{color:var(--accent);font-size:20px;font-weight:400}
+.project-evidence[open]>summary span{transform:rotate(45deg)}
+.project-evidence figure{margin:2px 0 36px;max-width:900px}
+.project-evidence img{display:block;width:100%;height:auto;border:1px solid var(--line);background:var(--surface)}
+.project-evidence figcaption{color:var(--muted);font-size:13px;line-height:1.7;margin:16px 0 10px;max-width:720px}
+.project-evidence figure>a{font-size:12px}
 .capabilities{background:var(--paper)}.capability-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:35px;margin-top:58px}.capability-grid article{padding-top:26px;border-top:2px solid var(--line)}.capability-num{color:var(--accent);font-size:12px;font-weight:700}.capability-grid h3{font:800 20px/1.35 var(--display);letter-spacing:-.045em;margin:21px 0 12px}.capability-grid p{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 25px}.capability-proof{display:block;font-size:12px;font-weight:600;color:var(--subtle);border-top:1px solid var(--line);padding-top:14px}
 .philosophy{background:var(--surface);border-block:1px solid var(--line)}.philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:120px;align-items:start}.philosophy-grid h2{margin-top:25px}.philosophy-content{padding-top:6px}.philosophy-content p{font:400 17px/1.85 var(--body);color:var(--muted);margin:0 0 23px}.philosophy-content .link-simple{margin-top:19px}
 .footer{background:var(--paper);padding:100px 0 27px}.footer-row{display:flex;align-items:end;justify-content:space-between;gap:40px;padding-bottom:106px}.footer h2{font-size:clamp(57px,6.5vw,86px);margin:20px 0}.footer-row p{color:var(--muted);margin:0;font-size:16px}.footer-cta{font:700 16px var(--body);border-bottom:2px solid var(--accent);padding-bottom:8px;white-space:nowrap}.footer-cta:hover{color:var(--accent)}

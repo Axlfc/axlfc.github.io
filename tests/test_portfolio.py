@@ -57,6 +57,16 @@ class PortfolioSmokeTests(unittest.TestCase):
         self.assertIn("viewport", HTML)
         self.assertIn("mobile-nav", HTML)
 
+    def test_real_collaborative_screenshot_provenance(self):
+        self.assertIn('id="hypenosys-interfaz"', HTML)
+        self.assertIn('src="/assets/hypenosys-ui-test.png"', HTML)
+        self.assertIn('loading="lazy"', HTML)
+        self.assertIn('proyecto colaborativo', HTML)
+        self.assertIn('hypenosys.github.io/blob/master/runners_ui_test.png', HTML)
+        graphic = (ROOT / "assets/hypenosys-ui-test.png").read_bytes()
+        self.assertTrue(graphic.startswith(bytes([137, 80, 78, 71, 13, 10, 26, 10])))
+        self.assertEqual(struct.unpack(">II", graphic[16:24]), (1280, 720))
+
     def test_publication_guardrails(self):
         self.assertNotIn("Esta es una previsualización local", HTML)
         self.assertNotRegex(HTML, r"(?i)diputaci[oó]n de tarragona|gabinet[e]? de presidencia")

@@ -37,6 +37,13 @@ with sync_playwright() as playwright:
             page.locator("#archivo summary").click()
             assert page.locator("#archivo").evaluate("d => d.open")
             assert page.locator(".archive-list > a").count() == 7
+            evidence = page.locator("#hypenosys-interfaz")
+            assert evidence.count() == 1
+            evidence.locator("summary").click()
+            assert evidence.evaluate("d => d.open")
+            assert evidence.locator('img[loading="lazy"]').count() == 1
+            evidence.locator("summary").click()
+            assert not evidence.evaluate("d => d.open")
             page.locator("#clonar-repos summary").click()
             assert page.locator(".clone-copy").count() == 8
             page.evaluate('window.location.hash = "#EditMovie"')
