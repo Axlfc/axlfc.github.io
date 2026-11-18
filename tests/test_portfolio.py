@@ -47,7 +47,7 @@ class PortfolioSmokeTests(unittest.TestCase):
 
     def test_articles_and_principles(self):
         self.assertGreaterEqual(HTML.count("medium.com/@axelfernandezcurros"), 6)
-        self.assertIn("FLOSS", HTML)
+        self.assertIn("tecnologías abiertas", HTML)
 
     def test_accessibility_and_responsive(self):
         self.assertIn("prefers-reduced-motion", CSS)
