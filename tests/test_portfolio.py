@@ -12,7 +12,7 @@ JS = (ROOT / "script.js").read_text(encoding="utf-8")
 
 class PortfolioSmokeTests(unittest.TestCase):
     def test_core_files(self):
-        for relative in ("index.html", "styles.css", "script.js", "404.html", "privacidad.html", "assets/axlfc-mark.svg"):
+        for relative in ("index.html", "styles.css", "script.js", "404.html", "privacidad.html", "assets/axlfc-mark.svg", "docs/portfolio-v2/LEGACY-INDEX.html", "legacy-english.html"):
             with self.subTest(relative=relative):
                 self.assertTrue((ROOT / relative).is_file())
 

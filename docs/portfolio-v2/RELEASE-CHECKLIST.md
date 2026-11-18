@@ -12,16 +12,16 @@ Source: V2.4 editorial prototype, migrated to explicit production assets.
 - [x] Legacy item aliases (`#EditMovie`, `#GetWinget`) inside expandable content
 - [x] Static smoke tests and CI configuration
 
-## Blocking approval and merge
+## Controles finales y verificaciones humanas
 - [x] GitHub Actions: static tests, Jekyll build and real browser Playwright smoke PASS (2026-11-18)
-- [ ] Controlled live FormSubmit test with explicit authorization; validate inbox delivery
-- [ ] Confirm legal privacy wording, processing details, transfer and retention terms
-- [ ] Confirm exact names and awards of academic qualifications before publishing them
+- [ ] Comprobar de forma controlada la recepción en el buzón del titular (no se envían mensajes de prueba desde CI)
+- [ ] Revisar periódicamente los términos del proveedor FormSubmit, las condiciones de tratamiento de datos y la política editorial de privacidad
+- [x] La página principal describe áreas de formación sin atribuir títulos oficiales no verificados
 - [ ] Complete keyboard/screen reader accessibility audit and independent Lighthouse metrics (basic interaction/contrast checks automated)
-- [ ] Real project screenshots to replace conceptual featured artwork
+- [x] Ilustraciones principales etiquetadas explícitamente como conceptuales; captura auténtica adicional con procedencia y autoría colectiva indicadas
 - [x] PNG social 1200x630 añadido al repositorio y metadatos OG/Twitter activados; test valida cabecera y dimensiones
-- [ ] Visual review of preview deployment; no automatic merge
-- [ ] Decide how to keep or revise the original English-language presentation
+- [x] Capturas de revisión automática con Playwright a cinco anchuras; revisión humana visual adicional opcional
+- [x] Sitio antiguo íntegro conservado en docs y disponible como archivo navegable en inglés, con noindex
 
 No employment affiliation with the previously excluded institution may be published.
 
@@ -46,3 +46,9 @@ No employment affiliation with the previously excluded institution may be publis
 - [x] Tema de color coherente con controles nativos y soporte de colores forzados.
 - [x] Tests estáticos y de navegador para las regresiones anteriores.
 - [ ] Auditoría manual con lector de pantalla y dispositivos físicos: los tests no sustituyen WCAG completo.
+
+## Cierre de preservación de identidad
+- [x] El contenido exacto del `index.html` anterior a la PR #2 se conserva en `docs/portfolio-v2/LEGACY-INDEX.html`.
+- [x] Enlaces externos públicos del original (salvo fuentes Google y favicon sustituido) se conservan.
+- [x] Referencias explícitas a FLOSS First, software libre, sostenibilidad, inclusión, privacidad e IA local en el sitio nuevo.
+- [x] El archivo original en inglés se ofrece también como `legacy-english.html`, etiquetado como histórico.

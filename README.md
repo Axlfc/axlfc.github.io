@@ -4,7 +4,7 @@ Código fuente de [axlfc.github.io](https://axlfc.github.io), el portafolio de A
 
 El objetivo editorial es mostrar **trabajos verificables** en desarrollo web, software, automatización, infraestructura y tecnología creativa, con una navegación limpia y accesible. Los proyectos de investigación se diferencian de los productos ejecutables.
 
-> **Estado:** el rediseño se encuentra en [Draft PR #2](https://github.com/Axlfc/axlfc.github.io/pull/2), rama `feat/portfolio-v2-editorial`. La rama `master` continúa publicada sin modificaciones hasta autorizar el merge.
+> **Origen del rediseño:** [PR #2](https://github.com/Axlfc/axlfc.github.io/pull/2). Publicación sujeta a CI y verificaciones de producción.
 
 ## Estructura de la V2
 
@@ -13,7 +13,7 @@ El objetivo editorial es mostrar **trabajos verificables** en desarrollo web, so
 | `index.html` | Contenido y estructura semántica del portafolio |
 | `styles.css` | Layout editorial, responsive, colores y foco visible |
 | `script.js` | Preferencia de tema, navegación, enlaces históricos y botones de copia |
-| `privacidad.html` | Información preliminar sobre datos del formulario |
+| `privacidad.html` | Información de privacidad y proveedor externo de contacto |
 | `404.html` | Página de error |
 | `assets/axlfc-mark.svg` | Favicon |
 | `assets/axlfc-social.png` | Imagen social PNG 1200×630, generada a partir de la identidad editorial |
@@ -50,11 +50,11 @@ python scripts/generate_social_card.py
 
 ## Formulario
 
-Se mantiene el proveedor FormSubmit y el destino ya configurado en la web anterior. Incluye campos obligatorios, honeypot y un retorno corregido. La recepción efectiva, el riesgo de spam y la documentación jurídica **requieren validación antes del merge**; no se hacen envíos automáticos como parte de los tests.
+Se mantiene el proveedor FormSubmit y el destino ya configurado en la web anterior. Incluye campos obligatorios, honeypot y un retorno corregido. Las pruebas no envían mensajes reales. La recepción en la bandeja de correo y el tratamiento operativo del servicio externo deben verificarse por el titular.
 
 ## Publicación y decisiones pendientes
 
-La publicación en `master` depende de cerrar [la checklist de liberación](docs/portfolio-v2/RELEASE-CHECKLIST.md). No se realizarán merges automáticos.
+La [checklist de mantenimiento y publicación](docs/portfolio-v2/RELEASE-CHECKLIST.md) documenta qué se verificó automáticamente y qué requiere revisión humana. Para futuras versiones, revisa CI antes de fusionar.
 
 Los recursos visuales de proyectos etiquetados como conceptuales **no son capturas de producto**. No publicar contenido privado de terceros ni atribuir a una persona contribuciones sin verificación.
 
@@ -63,3 +63,9 @@ Los recursos visuales de proyectos etiquetados como conceptuales **no son captur
 ## Documentación anterior
 
 El [README histórico](docs/portfolio-v2/README-LEGACY.md) se conserva por trazabilidad; menciona Bootstrap y una rama `main` que no corresponden a la arquitectura actual.
+
+## Conservación íntegra del portafolio anterior
+
+La versión original de `master`, tal como existía antes de la PR #2, se ha conservado **sin modificaciones** en [docs/portfolio-v2/LEGACY-INDEX.html](docs/portfolio-v2/LEGACY-INDEX.html). También se ofrece una [versión navegable del archivo en inglés](https://axlfc.github.io/legacy-english.html), identificada como histórica y excluida de indexación. El README previo permanece en `docs/portfolio-v2/README-LEGACY.md` y se conserva todo el historial Git.
+
+Las menciones del archivo a métricas, títulos o productos son declaraciones **históricas del portafolio anterior**, no validaciones nuevas.

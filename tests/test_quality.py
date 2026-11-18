@@ -101,6 +101,26 @@ class PortfolioQualityTests(unittest.TestCase):
         self.assertIn('color-scheme:dark', CSS)
         self.assertIn('forced-colors:active', CSS)
 
+    def test_original_website_links_preserved(self):
+        old = (ROOT / 'docs/portfolio-v2/LEGACY-INDEX.html').read_text(encoding='utf-8')
+        original = Tags()
+        original.feed(old)
+        current = Tags()
+        current.feed(HTML)
+        def links(parser):
+            return {attrs['href'] for tag, attrs in parser.tags
+                    if tag == 'a' and attrs.get('href', '').startswith('https://')}
+        missing = links(original) - links(current)
+        self.assertEqual(missing, set(), f'Lost external source links: {missing}')
+        self.assertIn('FLOSS First', HTML)
+        self.assertIn('Sostenibilidad', HTML)
+        self.assertIn('IA local', HTML)
+        self.assertIn('Inclusión y accesibilidad', HTML)
+        self.assertIn('href="/legacy-english.html"', HTML)
+        archived = (ROOT / 'legacy-english.html').read_text(encoding='utf-8')
+        self.assertIn('noindex', archived)
+        self.assertIn('Previous portfolio', archived)
+
     def test_form_does_not_submit_during_ci(self):
         parser = Tags()
         parser.feed(HTML)
