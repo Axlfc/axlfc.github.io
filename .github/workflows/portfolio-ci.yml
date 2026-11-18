@@ -51,11 +51,17 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Browser interaction and responsive checks
         run: python tests/browser_smoke.py
+      - name: Install pinned axe-core for accessibility audit
+        run: npm install --prefix /tmp/axlfc-a11y --no-save --no-package-lock axe-core@4.10.3
+      - name: Automated WCAG 2.1 A/AA checks (axe-core)
+        run: python tests/a11y_axe.py
       - name: Preserve visual review screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: portfolio-browser-captures
-          path: browser-artifacts/*.png
+          path: |
+            browser-artifacts/*.png
+            browser-artifacts/axe-report.json
           if-no-files-found: warn
           retention-days: 7
