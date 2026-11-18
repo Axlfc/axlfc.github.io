@@ -1,4 +1,5 @@
 """Playwright smoke: local assets only; no real contact submission."""
+import os
 from pathlib import Path
 import base64
 from playwright.sync_api import sync_playwright
@@ -17,7 +18,10 @@ artifacts = ROOT / "browser-artifacts"
 artifacts.mkdir(exist_ok=True)
 errors = []
 with sync_playwright() as playwright:
-    browser = playwright.chromium.launch(headless=True)
+    chrome_executable = os.environ.get("CHROME_EXECUTABLE")
+    browser = playwright.chromium.launch(
+        headless=True, **({"executable_path": chrome_executable} if chrome_executable else {})
+    )
     try:
         for width, height in [(320, 790), (390, 844), (768, 1024), (1024, 768), (1440, 900)]:
             ctx = browser.new_context(viewport={"width": width, "height": height}, device_scale_factor=1)

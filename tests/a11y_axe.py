@@ -29,7 +29,10 @@ pages = {
 }
 all_violations = []
 with sync_playwright() as pw:
-    browser = pw.chromium.launch(headless=True)
+    chrome_executable = os.environ.get("CHROME_EXECUTABLE")
+    browser = pw.chromium.launch(
+        headless=True, **({"executable_path": chrome_executable} if chrome_executable else {})
+    )
     try:
         for name, html in pages.items():
             for theme in ("light", "dark"):

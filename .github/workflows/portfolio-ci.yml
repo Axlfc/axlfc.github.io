@@ -45,10 +45,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install Chromium and Playwright
+      - name: Install Playwright and use preinstalled Chrome
         run: |
           python -m pip install playwright==1.57.0
-          python -m playwright install --with-deps chromium
+          command -v google-chrome
+          google-chrome --version
+          echo "CHROME_EXECUTABLE=$(command -v google-chrome)" >> "$GITHUB_ENV"
       - name: Browser interaction and responsive checks
         run: python tests/browser_smoke.py
       - name: Install pinned axe-core for accessibility audit
