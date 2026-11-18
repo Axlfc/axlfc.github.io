@@ -1,5 +1,6 @@
 """Playwright smoke: local assets only; no real contact submission."""
 from pathlib import Path
+import base64
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -8,6 +9,9 @@ css = (ROOT / "styles.css").read_text(encoding="utf-8")
 js = (ROOT / "script.js").read_text(encoding="utf-8")
 html = html.replace('<link rel="stylesheet" href="/styles.css">', "<style>" + css + "</style>")
 html = html.replace('<script src="/script.js" defer></script>', "<script>" + js + "</script>")
+snapshot = base64.b64encode((ROOT / "assets/hypenosys-ui-test.png").read_bytes()).decode("ascii")
+html = html.replace('src="/assets/hypenosys-ui-test.png"',
+                    'src="data:image/png;base64,' + snapshot + '"')
 assert "<style>" in html and "<script>" in html, "Failed to inline local assets"
 artifacts = ROOT / "browser-artifacts"
 artifacts.mkdir(exist_ok=True)
@@ -42,6 +46,13 @@ with sync_playwright() as playwright:
             evidence.locator("summary").click()
             assert evidence.evaluate("d => d.open")
             assert evidence.locator('img[loading="lazy"]').count() == 1
+            evidence.locator("img").scroll_into_view_if_needed()
+            page.wait_for_function("""() => {
+                const img = document.querySelector('#hypenosys-interfaz img');
+                return img && img.complete && img.naturalWidth === 1280 && img.naturalHeight === 720;
+            }""")
+            if width == 1440:
+                evidence.screenshot(path=str(artifacts / "project-evidence-1440.png"), timeout=15000)
             evidence.locator("summary").click()
             assert not evidence.evaluate("d => d.open")
             page.locator("#clonar-repos summary").click()
